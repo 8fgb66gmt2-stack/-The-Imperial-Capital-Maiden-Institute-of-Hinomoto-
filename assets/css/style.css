@@ -663,3 +663,64 @@ body{background-color:#f7f0e5;background-image:radial-gradient(ellipse at 15% 15
  .js [data-reveal],.gallery-open img,.button,.text-link{transition:none!important}
  .js [data-reveal]{opacity:1;transform:none}
 }
+
+
+/* Faculty register — paired literary portraits */
+.faculty-section{position:relative;overflow:hidden}
+.faculty-section:before{content:"❦";position:absolute;left:-.03em;top:110px;font:clamp(130px,22vw,310px) Georgia,serif;color:#a98c5a;opacity:.055;pointer-events:none}
+.faculty-section>.section-heading{position:relative;z-index:1}
+.faculty-register{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,3vw,38px);margin:54px auto 0;max-width:1120px}
+.faculty-profile{position:relative;min-width:0;padding:clamp(22px,3.2vw,42px);background:linear-gradient(155deg,#fffdf8 0%,#f7f0e5 100%);border:1px solid #cdbb98;box-shadow:0 16px 42px #5a45300d}
+.faculty-profile:before{content:"";position:absolute;inset:7px;border:1px solid #e6dac4;pointer-events:none}
+.faculty-profile:after{content:"";position:absolute;right:18px;bottom:15px;width:52px;height:52px;border-right:1px solid #c9b58e;border-bottom:1px solid #c9b58e;opacity:.8;pointer-events:none}
+.faculty-profile-yakumo{background:linear-gradient(155deg,#fffdf8 0%,#edf0e8 100%);border-color:#aeb9a7}
+.faculty-profile-top,.faculty-profile-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.faculty-record-no,.faculty-reference{font:9px var(--latin);letter-spacing:.17em;color:#9b8767}
+.faculty-subject{padding:6px 12px;border:1px solid #cdbb98;color:var(--wine);font-size:10px;letter-spacing:.12em}
+.faculty-profile-yakumo .faculty-subject{border-color:#aab7a2;color:#5e7666}
+.faculty-profile-main{display:grid;grid-template-columns:clamp(84px,10vw,124px) 1fr;align-items:center;gap:clamp(16px,2.5vw,30px);margin:34px 0 26px}
+.faculty-monogram{aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;border:1px solid #bca77e;border-radius:50%;color:#8e5965;background:radial-gradient(circle,#fffdf8 42%,#f1e6d8 100%);outline:1px solid #d9c8a8;outline-offset:5px}
+.faculty-monogram:before,.faculty-monogram:after{content:"✧";position:absolute;color:#b69b68;font-size:12px}
+.faculty-monogram:before{top:8px}.faculty-monogram:after{bottom:8px}
+.faculty-monogram span{font-family:"Shippori Mincho",serif;font-size:clamp(34px,5vw,53px);line-height:1}
+.faculty-monogram i{font:8px var(--latin);letter-spacing:.16em;font-style:normal;margin-top:8px}
+.faculty-profile-yakumo .faculty-monogram{color:#647b6a;border-color:#91a18d;background:radial-gradient(circle,#fffdf8 42%,#e6ebdf 100%);outline-color:#c4cfbd}
+.faculty-name-en{margin:0 0 7px;font:9px var(--latin);letter-spacing:.17em;color:#9b8767}
+.faculty-name-block h3{margin:0;color:var(--ink);font:500 clamp(27px,3.5vw,39px) "Shippori Mincho",serif;letter-spacing:.12em}
+.faculty-name-block h3 em{font-style:normal;color:var(--wine)}
+.faculty-profile-yakumo .faculty-name-block h3 em{color:#5f7868}
+.faculty-reading{margin:6px 0 0;color:#857673;font-size:10px;letter-spacing:.16em}
+.faculty-epithet{margin:15px 0 0;color:#786765;font-size:11px;letter-spacing:.07em;line-height:1.9}
+.faculty-profile-rule{display:flex;align-items:center;gap:12px;color:#b69a68;margin:0 0 17px}
+.faculty-profile-rule:before,.faculty-profile-rule:after{content:"";height:1px;background:linear-gradient(90deg,transparent,#d6c5a6);flex:1}
+.faculty-profile-rule:after{background:linear-gradient(90deg,#d6c5a6,transparent)}
+.faculty-profile-rule span{font-size:19px}
+.faculty-biography{position:relative;margin:0;color:#655957;font-size:11px;line-height:2.45;text-align:justify}
+.faculty-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px;margin:25px 0 22px;padding:14px 0;border-top:1px solid #e0d4bf;border-bottom:1px solid #e0d4bf}
+.faculty-facts div{display:grid;grid-template-columns:54px 1fr;gap:8px;padding:7px 0;align-items:start}
+.faculty-facts dt{color:#a08b6d;font-size:9px;letter-spacing:.1em}
+.faculty-facts dd{margin:0;color:#544746;font-size:10px;line-height:1.7}
+.faculty-warning{color:#a04d5c;font-size:9px;letter-spacing:.04em}
+.faculty-interest{color:#657c69;font-size:9px;letter-spacing:.04em}
+.faculty-relationship{position:relative;display:grid;grid-template-columns:50px 1fr auto;align-items:center;gap:20px;max-width:900px;margin:38px auto 0;padding:25px 30px;border:1px solid #d7c8ad;background:#f5efe4}
+.faculty-relationship-mark{font-size:28px;color:#b69a68;text-align:center}
+.faculty-relationship .eyebrow-small{margin:0 0 5px}
+.faculty-relationship h3{margin:0 0 5px;color:var(--wine);font-size:16px;font-weight:500;letter-spacing:.12em}
+.faculty-relationship p:not(.eyebrow-small){margin:0;color:#766966;font-size:10px;line-height:2}
+.faculty-relationship-seal{display:grid;place-items:center;width:66px;height:66px;border:1px solid #bda981;border-radius:50%;color:#967c54;font-family:"Shippori Mincho",serif;font-size:13px;transform:rotate(-8deg)}
+.faculty-register-caption{margin:25px 0 0;text-align:center;font:8px var(--latin);letter-spacing:.18em;color:#a18c6a}
+@media(max-width:760px){
+ .faculty-register{grid-template-columns:1fr;gap:22px;margin-top:34px}
+ .faculty-profile{padding:25px 22px}
+ .faculty-profile-main{grid-template-columns:82px 1fr;gap:18px;margin:29px 0 22px}
+ .faculty-name-block h3{font-size:29px}
+ .faculty-biography{font-size:11px}
+ .faculty-relationship{grid-template-columns:34px 1fr;gap:12px;padding:20px 17px}
+ .faculty-relationship-seal{grid-column:2;justify-self:end;width:54px;height:54px}
+}
+@media(max-width:390px){
+ .faculty-profile-main{grid-template-columns:70px 1fr;gap:14px}
+ .faculty-monogram span{font-size:30px}
+ .faculty-name-block h3{font-size:25px}
+ .faculty-facts div{grid-template-columns:46px 1fr;gap:5px}
+}
