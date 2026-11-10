@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">薔薇の庭園と帝都女學院の校舎</title>
+<desc id="desc">象牙色の石造りの校舎、アーチ窓、庭園の薔薇と樹木を淡い水彩調で描いた装飾画。</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5ead9"/><stop offset=".58" stop-color="#eadbd4"/><stop offset="1" stop-color="#d9d8c8"/></linearGradient>
+  <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff9e9"/><stop offset=".52" stop-color="#e9ddc8"/><stop offset="1" stop-color="#cbb99e"/></linearGradient>
+  <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a97b75"/><stop offset="1" stop-color="#805d60"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7e1d5"/><stop offset=".5" stop-color="#e9d6c5"/><stop offset="1" stop-color="#b7c8bd"/></linearGradient>
+  <linearGradient id="garden" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a5ad8b"/><stop offset="1" stop-color="#75866e"/></linearGradient>
+  <radialGradient id="sunlight"><stop stop-color="#fff9e8" stop-opacity=".95"/><stop offset="1" stop-color="#fff9e8" stop-opacity="0"/></radialGradient>
+  <pattern id="papergrain" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r=".8" fill="#8b765e" opacity=".12"/><circle cx="16" cy="14" r=".7" fill="#8b765e" opacity=".1"/></pattern>
+</defs>
+<rect width="1200" height="760" fill="url(#sky)"/>
+<circle cx="875" cy="125" r="190" fill="url(#sunlight)"/>
+<path d="M0 510 Q170 450 300 495 T600 480 T900 490 T1200 455 V760 H0Z" fill="#d5d5c2" opacity=".55"/>
+<g fill="none" stroke="#bca884" stroke-width="1" opacity=".45">
+  <rect x="28" y="27" width="1144" height="706"/><rect x="38" y="37" width="1124" height="686"/>
+  <path d="M44 72h92M44 72v92M1156 72h-92M1156 72v92M44 688h92M44 688v-92M1156 688h-92M1156 688v-92"/>
+</g>
+<g opacity=".27" fill="#a7ae91">
+  <ellipse cx="120" cy="470" rx="100" ry="155"/><ellipse cx="1060" cy="445" rx="130" ry="175"/>
+</g>
+<!-- distant wings -->
+<g>
+  <path d="M160 348 L330 245 L500 348 V555 H160Z" fill="url(#stone)" stroke="#ad9774" stroke-width="3"/>
+  <path d="M700 348 L870 245 L1040 348 V555 H700Z" fill="url(#stone)" stroke="#ad9774" stroke-width="3"/>
+  <path d="M145 350 L330 230 L515 350" fill="none" stroke="#9a776b" stroke-width="9"/>
+  <path d="M685 350 L870 230 L1055 350" fill="none" stroke="#9a776b" stroke-width="9"/>
+  <path d="M177 355H482M717 355H1022" stroke="#b69c76" stroke-width="5"/>
+  <g fill="url(#glass)" stroke="#9c8b73" stroke-width="3">
+    <path d="M205 395V340a25 25 0 0 1 50 0v55Z"/><path d="M285 395V340a25 25 0 0 1 50 0v55Z"/><path d="M365 395V340a25 25 0 0 1 50 0v55Z"/>
+    <path d="M745 395V340a25 25 0 0 1 50 0v55Z"/><path d="M825 395V340a25 25 0 0 1 50 0v55Z"/><path d="M905 395V340a25 25 0 0 1 50 0v55Z"/>
+  </g>
+  <g stroke="#b6a282" stroke-width="2"><path d="M230 315v80m-25-40h50M310 315v80m-25-40h50M390 315v80m-25-40h50M770 315v80m-25-40h50M850 315v80m-25-40h50M930 315v80m-25-40h50"/></g>
+</g>
+<!-- central academic building -->
+<g>
+  <path d="M285 585V330L600 135L915 330V585Z" fill="url(#stone)" stroke="#9f896b" stroke-width="4"/>
+  <path d="M258 336L600 112L942 336H258Z" fill="url(#roof)" stroke="#8e6b65" stroke-width="4"/>
+  <path d="M315 326L600 149L885 326" fill="none" stroke="#f2e4cb" stroke-width="5"/>
+  <path d="M358 305H842V326H358Z" fill="#d6c5a8" stroke="#a99170" stroke-width="2"/>
+  <path d="M425 275H775V305H425Z" fill="#eee3ce" stroke="#b39b79" stroke-width="2"/>
+  <path d="M465 270V239H735V270" fill="#e4d5bc" stroke="#ab9270" stroke-width="2"/>
+  <path d="M500 239Q600 185 700 239" fill="none" stroke="#ab8c69" stroke-width="3"/>
+  <circle cx="600" cy="232" r="13" fill="#f8f0df" stroke="#a88b65" stroke-width="2"/>
+  <path d="M285 342H915M300 360H900" stroke="#b39d7c" stroke-width="3"/>
+  <g fill="#e2d4bd" stroke="#a48e70" stroke-width="2">
+    <rect x="325" y="361" width="550" height="18"/>
+    <rect x="310" y="552" width="580" height="18"/>
+  </g>
+  <g fill="#f7f0e2" stroke="#b19b78" stroke-width="2">
+    <rect x="350" y="379" width="500" height="14"/>
+    <rect x="350" y="530" width="500" height="14"/>
+  </g>
+  <!-- upper floor windows -->
+  <g fill="url(#glass)" stroke="#9c8769" stroke-width="3">
+    <path d="M365 505V420a27 27 0 0 1 54 0v85Z"/><path d="M455 505V420a27 27 0 0 1 54 0v85Z"/>
+    <path d="M545 505V414a55 55 0 0 1 110 0v91Z"/>
+    <path d="M691 505V420a27 27 0 0 1 54 0v85Z"/><path d="M781 505V420a27 27 0 0 1 54 0v85Z"/>
+  </g>
+  <g stroke="#b9a17a" stroke-width="2">
+    <path d="M392 399v106m-27-53h54M482 399v106m-27-53h54M600 363v142m-55-71h110M718 399v106m-27-53h54M808 399v106m-27-53h54"/>
+  </g>
+  <!-- entrance -->
+  <path d="M540 585V525a60 60 0 0 1 120 0v60Z" fill="#8b6266" stroke="#9f8569" stroke-width="4"/>
+  <path d="M554 584V529a46 46 0 0 1 92 0v55Z" fill="url(#glass)" stroke="#d6c29d" stroke-width="3"/>
+  <path d="M600 483v101m-46-51h92" stroke="#a78c6a" stroke-width="3"/>
+  <path d="M500 590H700L720 615H480Z" fill="#d2c1a6" stroke="#a68f70" stroke-width="2"/>
+  <path d="M470 615H730L747 638H453Z" fill="#e6d8c1" stroke="#aa9574" stroke-width="2"/>
+  <path d="M440 638H760L779 660H421Z" fill="#c7b697" stroke="#9f8a6d" stroke-width="2"/>
+  <path d="M340 356v-28M860 356v-28M600 135v-26" stroke="#d8c59c" stroke-width="4"/>
+  <path d="M584 117h32M590 106h20" stroke="#aa8f67" stroke-width="2"/>
+</g>
+<!-- garden and paths -->
+<path d="M0 625Q210 560 365 625T690 625T1200 600V760H0Z" fill="url(#garden)" opacity=".84"/>
+<path d="M420 760Q525 670 600 635Q675 670 780 760Z" fill="#e8dfcc" stroke="#b6a17c" stroke-width="3"/>
+<path d="M495 760Q550 680 600 649Q650 680 705 760" fill="none" stroke="#c3b394" stroke-width="2"/>
+<g fill="#758b70" opacity=".8">
+  <ellipse cx="90" cy="495" rx="90" ry="116"/><ellipse cx="1110" cy="480" rx="102" ry="127"/>
+  <ellipse cx="150" cy="415" rx="66" ry="88"/><ellipse cx="1045" cy="390" rx="78" ry="100"/>
+</g>
+<g fill="#9da987" opacity=".8">
+  <circle cx="82" cy="410" r="43"/><circle cx="135" cy="370" r="47"/><circle cx="96" cy="350" r="38"/>
+  <circle cx="1080" cy="371" r="52"/><circle cx="1020" cy="404" r="43"/><circle cx="1127" cy="430" r="42"/>
+</g>
+<g stroke="#71846c" stroke-width="5" fill="none" stroke-linecap="round">
+  <path d="M90 590Q86 480 94 365M1110 590Q1100 470 1082 355"/>
+  <path d="M90 460Q40 420 48 384M95 437Q145 395 157 360M1090 450Q1045 420 1030 384M1090 420Q1140 390 1155 360"/>
+</g>
+<!-- flower beds -->
+<g fill="#9c5364" opacity=".92">
+  <circle cx="170" cy="616" r="12"/><circle cx="198" cy="640" r="9"/><circle cx="232" cy="612" r="11"/><circle cx="275" cy="635" r="10"/>
+  <circle cx="920" cy="624" r="11"/><circle cx="958" cy="643" r="9"/><circle cx="1000" cy="615" r="12"/><circle cx="1042" cy="638" r="10"/>
+  <circle cx="346" cy="668" r="9"/><circle cx="382" cy="685" r="7"/><circle cx="825" cy="681" r="8"/><circle cx="864" cy="664" r="10"/>
+</g>
+<g fill="#e5c7ca">
+  <circle cx="170" cy="616" r="4"/><circle cx="198" cy="640" r="3"/><circle cx="232" cy="612" r="4"/><circle cx="275" cy="635" r="3"/>
+  <circle cx="920" cy="624" r="4"/><circle cx="958" cy="643" r="3"/><circle cx="1000" cy="615" r="4"/><circle cx="1042" cy="638" r="3"/>
+</g>
+<g fill="#6f866e" opacity=".9">
+  <ellipse cx="145" cy="645" rx="35" ry="9" transform="rotate(-25 145 645)"/><ellipse cx="230" cy="656" rx="36" ry="8" transform="rotate(18 230 656)"/>
+  <ellipse cx="965" cy="664" rx="36" ry="8" transform="rotate(-18 965 664)"/><ellipse cx="1040" cy="657" rx="35" ry="8" transform="rotate(22 1040 657)"/>
+</g>
+<!-- rose ornaments -->
+<g fill="none" stroke="#a47e71" stroke-width="2" opacity=".8">
+  <path d="M20 720Q65 650 43 580Q40 550 65 530M1180 720Q1135 650 1157 580Q1160 550 1135 530"/>
+  <path d="M43 620q-30-22-35-2q16 21 35 2M54 581q30-29 40-9q-11 25-40 9M1157 620q30-22 35-2q-16 21-35 2M1146 581q-30-29-40-9q11 25 40 9"/>
+</g>
+<g fill="#b85f71" opacity=".92">
+  <g transform="translate(53 535)"><circle r="14"/><circle r="8" fill="#e8bfc1"/><path d="M-10-3Q0-17 10-3Q14 9 0 12Q-14 9-10-3Z" fill="none" stroke="#f1d9d1" stroke-width="2"/></g>
+  <g transform="translate(1147 535)"><circle r="14"/><circle r="8" fill="#e8bfc1"/><path d="M-10-3Q0-17 10-3Q14 9 0 12Q-14 9-10-3Z" fill="none" stroke="#f1d9d1" stroke-width="2"/></g>
+</g>
+<g fill="#f6eee0" opacity=".8"><circle cx="280" cy="140" r="3"/><circle cx="940" cy="220" r="2"/><circle cx="1020" cy="155" r="3"/><circle cx="210" cy="260" r="2"/></g>
+<rect width="1200" height="760" fill="url(#papergrain)" opacity=".4"/>
+</svg>

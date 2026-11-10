@@ -1,6 +1,8 @@
 (() => {
   "use strict";
 
+  document.documentElement.classList.add("js");
+
   const clock = document.getElementById("imperial-clock");
   const updateClock = () => {
     if (!clock) return;
@@ -57,6 +59,23 @@
     });
   }
 
+  const revealItems = [...document.querySelectorAll("[data-reveal]")];
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (revealItems.length) {
+    if ("IntersectionObserver" in window && !reducedMotion) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("is-visible"));
+    }
+  }
+
   const sections = [...document.querySelectorAll("main section[id]")];
   const navLinks = [...document.querySelectorAll(".global-nav a[href*='#']")];
   if ("IntersectionObserver" in window && sections.length && navLinks.length) {
@@ -67,7 +86,7 @@
           const active = link.hash === "#" + entry.target.id ||
             link.hash.endsWith("#" + entry.target.id);
           if (active) link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
+          else if (link.getAttribute("aria-current") === "location") link.removeAttribute("aria-current");
         });
       });
     }, { rootMargin: "-28% 0px -62% 0px", threshold: 0 });
