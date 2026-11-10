@@ -221,3 +221,22 @@ html{scroll-padding-top:85px}.utility-bar{height:29px;padding:0 5%;font-size:8px
 }
 @media(max-width:390px){.learning-grid{grid-template-columns:1fr}.learning-card{min-height:215px}.utility-name{font-size:7px}.hero-art{height:335px}.hero h1{font-size:36px}.story-side-note{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Literary reading room */
+.story-hero{position:relative;isolation:isolate;text-align:center;overflow:hidden;padding:100px 20px 84px;color:var(--wine);background:radial-gradient(ellipse at 50% 45%,#f9f2e8 0,#e9ded8 62%,#e2d5cf 100%);border-bottom:1px solid #c6b28c}
+.story-hero:before{content:"";position:absolute;inset:15px;border:1px solid #b79d6c88;pointer-events:none;z-index:-1}
+.story-hero:after{content:"";position:absolute;inset:23px;border:1px solid #b79d6c44;pointer-events:none;z-index:-1}
+.story-hero .section-index{font:10px var(--latin);letter-spacing:.22em;color:var(--crimson)}
+.story-kicker{font-size:13px;letter-spacing:.2em;color:#88777a;margin:28px 0 2px}
+.story-hero h1{font-size:clamp(55px,8vw,86px);font-weight:500;letter-spacing:.3em;color:var(--wine);margin:0 0 5px;text-shadow:0 2px 0 #fff8}
+.story-hero>p:not(.section-index):not(.story-kicker){font-size:12px;letter-spacing:.15em;color:#8b7d7a}
+.story-hero .story-flower{position:static;display:block;transform:none;font-size:30px;color:var(--gold);margin-top:22px}
+.story-body{position:relative;width:min(790px,86%);margin:0 auto;padding:88px 65px 60px;background:linear-gradient(90deg,transparent 0,#fffdf8a6 7%,#fffdf8a6 93%,transparent 100%);font-size:14px;line-height:2.75;letter-spacing:.065em;color:#4f4547}
+.story-body:before,.story-body:after{content:"";position:absolute;top:75px;bottom:45px;width:1px;background:linear-gradient(transparent,#d5c4a5 8%,#d5c4a5 92%,transparent)}
+.story-body:before{left:35px}.story-body:after{right:35px}
+.story-body p{margin:0 0 1.6em;text-indent:1em}
+.story-body p:first-child:first-letter{float:left;font-size:3.7em;line-height:.95;padding:.05em .13em 0 0;color:var(--crimson)}
+.story-body p.story-ending{margin-top:3em;color:var(--crimson);font-size:15px}
+.story-body p.story-signature{text-align:right;text-indent:0;margin-top:2.8em;color:var(--wine);font-size:13px}
+.story-back{width:min(790px,86%);margin:0 auto 85px;padding:25px 65px 0;border-top:1px solid #d6c8b1}
+@media(max-width:760px){.story-hero{padding:77px 18px 62px}.story-body{width:90%;padding:58px 28px 44px;font-size:12px;line-height:2.55}.story-body:before{left:13px}.story-body:after{right:13px}.story-back{width:90%;padding:20px 28px 0;margin-bottom:55px}}
