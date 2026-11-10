@@ -86,7 +86,15 @@
       $("#folio-kicker",dialog).textContent=p.kicker;$("#folio-title",dialog).textContent=p.title;$("#folio-body",dialog).textContent=p.body;
       $("#folio-count",dialog).textContent=String(pageIndex+1).padStart(2,"0")+" / "+String(pages.length).padStart(2,"0");
       $("#folio-prev",dialog).disabled=pageIndex===0;$("#folio-next",dialog).disabled=pageIndex===pages.length-1;
+      if(dialog.open && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        dialog.classList.remove("page-turning");void dialog.offsetWidth;dialog.classList.add("page-turning");
+        window.setTimeout(()=>dialog.classList.remove("page-turning"),460);
+      }
     };
+    dialog.addEventListener("keydown",event=>{
+      if(event.key==="ArrowLeft" && pageIndex>0){event.preventDefault();pageIndex--;renderPage();}
+      if(event.key==="ArrowRight" && pageIndex<pages.length-1){event.preventDefault();pageIndex++;renderPage();}
+    });
     $("#open-archive-book",explorer).addEventListener("click",()=>{pageIndex=0;renderPage();dialog.showModal();});
     $("#folio-prev",dialog).addEventListener("click",()=>{pageIndex=Math.max(0,pageIndex-1);renderPage();});
     $("#folio-next",dialog).addEventListener("click",()=>{pageIndex=Math.min(pages.length-1,pageIndex+1);renderPage();});
