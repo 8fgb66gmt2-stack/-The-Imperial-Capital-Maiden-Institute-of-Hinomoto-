@@ -6,3 +6,32 @@
 .founder-facts b{display:inline-block;min-width:4.5em;font-size:10px;font-weight:500;color:var(--wisteria);letter-spacing:.12em}
 .seal-motto{max-width:190px;text-align:center;font-size:10px;line-height:1.9;letter-spacing:.12em;color:var(--muted);z-index:1}
 @media(max-width:700px){.founder-facts{grid-template-columns:1fr 1fr;gap:9px}.founder-facts b{display:block;margin-bottom:2px}}
+
+/* Literary records and founder's tale */
+.founder-words{margin:22px 0;padding:15px 20px;border-left:2px solid var(--gold);background:#f6f0e5;color:var(--crimson);font-size:15px;line-height:2.1}
+.faculty-manifesto{max-width:760px;margin:0 auto;padding:42px 48px;text-align:center;border:1px solid #b89d6b88;background:#ffffff08}
+.faculty-ornament{font-size:34px;color:#d9bd84}
+.faculty-manifesto h3{font-size:22px;font-weight:500;letter-spacing:.15em;color:#f4e9d7;margin:12px 0 18px}
+.faculty-manifesto p{font-size:13px;line-height:2.4;color:#e6d9c8;margin:8px 0}
+.stories-section{background:#f1eadf}
+.stories-section .section-wrap{padding-top:95px;padding-bottom:105px}
+.story-feature{display:grid;grid-template-columns:1fr auto;gap:8px 25px;position:relative;overflow:hidden;padding:38px 45px;background:linear-gradient(115deg,#f9f5ec,#e9dece);border:1px solid var(--gold-light);color:var(--deep);text-decoration:none;transition:transform .2s,border-color .2s}
+.story-feature:hover{transform:translateY(-3px);border-color:var(--crimson)}
+.story-label{font:9px var(--sans);letter-spacing:.18em;color:var(--wisteria)}
+.story-title{font-size:42px;letter-spacing:.24em;grid-column:1}
+.story-subtitle{font-size:13px;color:var(--crimson);grid-column:1}
+.story-excerpt{font-size:13px;line-height:2.2;max-width:680px;grid-column:1}
+.story-open{font-size:12px;color:var(--crimson);border-bottom:1px solid var(--gold);padding-bottom:5px;grid-column:1;justify-self:start;margin-top:8px}
+.story-flower{position:absolute;right:8%;top:50%;transform:translateY(-50%);font-size:130px;color:#b99b6a33;pointer-events:none}
+.story-hero{position:relative;text-align:center;padding:95px 20px 75px;background:linear-gradient(145deg,#f0e7d8,#e5d7c4);border-bottom:1px solid var(--line);color:var(--deep)}
+.story-hero .section-index{color:var(--crimson)}
+.story-kicker{font-size:13px;letter-spacing:.18em;color:var(--muted);margin:28px 0 0}
+.story-hero h1{font-size:clamp(48px,8vw,76px);font-weight:500;letter-spacing:.28em;margin:0 0 12px;color:var(--deep)}
+.story-hero>p:not(.section-index):not(.story-kicker){font-size:13px;color:var(--muted)}
+.story-hero .story-flower{position:static;display:block;transform:none;font-size:27px;color:var(--gold);margin-top:20px}
+.story-body{width:min(760px,86%);margin:0 auto;padding:80px 0 55px;font-size:15px;line-height:2.65;letter-spacing:.055em}
+.story-body p{margin:0 0 1.5em;text-indent:1em}
+.story-body p.story-ending{margin-top:3em;color:var(--crimson);font-size:16px}
+.story-body p.story-signature{text-align:right;text-indent:0;margin-top:2.5em;color:var(--deep);font-size:14px}
+.story-back{width:min(760px,86%);margin:0 auto 85px;padding-top:25px;border-top:1px solid var(--line)}
+@media(max-width:700px){.faculty-manifesto{padding:30px 22px}.story-feature{padding:30px 25px}.story-title{font-size:36px}.story-flower{right:3%;font-size:85px}.story-hero{padding:75px 18px 55px}.story-body{padding-top:55px;font-size:14px;line-height:2.45}}
