@@ -53,3 +53,7 @@ body.is-ready .hero-copy,body.is-ready .hero-visual{animation:rr-arrive .8s cubi
 body.is-ready .hero-visual{animation-delay:.12s}
 @keyframes rr-arrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){body.is-ready .hero-copy,body.is-ready .hero-visual{animation:none}}
+
+.institute-dialog.page-turning .dialog-inner{animation:rr-folio-turn .42s cubic-bezier(.2,.7,.2,1) both;transform-origin:left center}
+@keyframes rr-folio-turn{0%{opacity:.35;transform:perspective(900px) rotateY(-7deg) translateX(8px)}100%{opacity:1;transform:perspective(900px) rotateY(0) translateX(0)}}
+@media(prefers-reduced-motion:reduce){.institute-dialog.page-turning .dialog-inner{animation:none}}
