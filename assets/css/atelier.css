@@ -382,3 +382,14 @@ button{touch-action:manipulation}
   .faculty-entry-identity-photo{padding:24px 18px}
   .faculty-portrait-frame{width:min(72%,232px)}
 }
+
+/* A quiet, accessible progress cue for long-form reading. */
+.atelier-reading-progress{
+  position:fixed;z-index:9999;top:0;left:0;width:100%;height:3px;
+  background:linear-gradient(90deg,#718576 0%,#b69a68 52%,#a65c6a 100%);
+  transform:scaleX(0);transform-origin:left center;pointer-events:none;
+  box-shadow:0 1px 5px rgba(103,73,58,.14);
+}
+.site-header.is-scrolled{box-shadow:0 12px 32px rgba(68,49,40,.1)}
+.about-section{position:relative;isolation:isolate}
+@media(prefers-reduced-motion:reduce){.atelier-reading-progress{transition:none!important}}
