@@ -310,3 +310,75 @@ button{touch-action:manipulation}
   .js [data-reveal]{opacity:1!important;transform:none!important}
   .section-wrap{width:100%;padding:24px 0}
 }
+
+/* Faculty portrait plates — photographs are displayed uncropped and unretouched. */
+.faculty-entry-identity-photo{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:25px 20px 22px;
+  background:
+    radial-gradient(ellipse at 50% 20%,rgba(255,255,255,.8),transparent 54%),
+    linear-gradient(150deg,#f4eadc,#e9ded3 58%,#f5eee3);
+  text-align:center;
+}
+.faculty-entry-identity-photo:after{content:none}
+.faculty-entry-identity-photo .faculty-identity-caption{
+  position:relative;z-index:1;
+  margin:0;
+  color:#8b7454;
+  font-size:9px;
+  letter-spacing:.2em;
+}
+.faculty-portrait-frame{
+  position:relative;
+  z-index:1;
+  width:min(100%,232px);
+  margin:0;
+  padding:8px;
+  background:#fffaf0;
+  border:1px solid #c5ad7d;
+  box-shadow:0 13px 28px rgba(65,46,36,.16),inset 0 0 0 1px rgba(255,255,255,.9);
+}
+.faculty-portrait-frame:before{
+  content:"";position:absolute;inset:4px;
+  border:1px solid rgba(183,151,98,.42);
+  pointer-events:none;
+}
+.faculty-portrait-frame img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:2/3;
+  object-fit:contain;
+  object-position:center;
+  filter:none!important;
+  transform:none!important;
+  border:1px solid rgba(114,89,68,.22);
+}
+.faculty-entry-identity-photo .faculty-identity-name{
+  position:relative;z-index:1;
+  margin:2px 0 0;
+  color:#73505a;
+  font-size:10px;
+  letter-spacing:.18em;
+}
+.faculty-entry-identity-photo .faculty-identity-vertical{
+  position:relative;z-index:1;
+  color:#796b5c;
+  font-size:10px;
+  letter-spacing:.18em;
+}
+.faculty-entry-identity-photo .faculty-identity-bottom{
+  position:relative;z-index:1;
+  color:#a18a64;
+  font-size:8px;
+  letter-spacing:.17em;
+}
+@media(max-width:760px){
+  .faculty-entry-identity-photo{padding:24px 18px}
+  .faculty-portrait-frame{width:min(72%,232px)}
+}
