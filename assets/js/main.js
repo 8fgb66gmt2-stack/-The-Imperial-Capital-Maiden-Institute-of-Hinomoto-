@@ -76,6 +76,25 @@
     }
   }
 
+  const lightbox = document.getElementById("art-lightbox");
+  if (lightbox && typeof lightbox.showModal === "function") {
+    const lightboxImage = lightbox.querySelector("img");
+    const lightboxCaption = lightbox.querySelector(".lightbox-caption");
+    document.querySelectorAll(".gallery-open").forEach(button => {
+      button.addEventListener("click", () => {
+        const image = button.querySelector("img");
+        if (!image) return;
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent = image.alt;
+        lightbox.showModal();
+      });
+    });
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) lightbox.close();
+    });
+  }
+
   const sections = [...document.querySelectorAll("main section[id]")];
   const navLinks = [...document.querySelectorAll(".global-nav a[href*='#']")];
   if ("IntersectionObserver" in window && sections.length && navLinks.length) {
