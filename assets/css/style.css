@@ -437,3 +437,12 @@ img{display:block;max-width:100%}
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .js [data-reveal]{opacity:1;transform:none}
 }
+/* Faculty record — kept intentionally open, without inventing individual biographies. */
+.faculty-section{padding-top:105px;padding-bottom:105px;background:#fffdf8}
+.faculty-essay{max-width:810px;margin:0 auto;padding:40px 55px;text-align:center;border:1px solid #d2c19f;background:linear-gradient(145deg,#faf5eb,#f2e9df);position:relative}
+.faculty-essay:before{content:"";position:absolute;inset:7px;border:1px solid #e0d3b9;pointer-events:none}
+.faculty-ornament{display:block;font-size:34px;color:#b49a6b}
+.faculty-essay h3{font-size:23px;font-weight:500;letter-spacing:.15em;color:var(--wine);margin:6px 0 17px}
+.faculty-essay p:not(.eyebrow-small){font-size:11px;line-height:2.5;color:#776b69;margin:8px 0}
+.faculty-motto{display:block;margin-top:22px;font:10px var(--latin);letter-spacing:.18em;color:#a08b6d}
+@media(max-width:760px){.faculty-section{padding-top:76px;padding-bottom:76px}.faculty-essay{padding:30px 20px}.faculty-essay h3{font-size:19px}.faculty-essay p:not(.eyebrow-small){font-size:10px}}
