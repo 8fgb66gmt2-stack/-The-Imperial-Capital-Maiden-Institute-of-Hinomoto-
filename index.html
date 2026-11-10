@@ -230,10 +230,10 @@
         <p>静謐な書架、語らいのサロン、音楽と藝術のアトリエ。<br>學院の日々を彩る場所をご紹介します。</p>
       </div>
       <div class="gallery-grid">
-        <figure class="gallery-scene gallery-library" id="library" data-reveal><img src="assets/images/rose-library.svg" alt="薔薇窓から光が差す大図書館" loading="lazy" width="760" height="520"><figcaption><span class="gallery-no">01 / THE LIBRARY</span><strong>薔薇窓の大図書館</strong><small>静けさのなかに、無数の世界がひらく。</small></figcaption></figure>
-        <figure class="gallery-scene gallery-garden" id="garden" data-reveal><img src="assets/images/rose-courtyard.svg" alt="噴水と薔薇、百合の咲く中庭" loading="lazy" width="760" height="520"><figcaption><span class="gallery-no">02 / THE COURTYARD</span><strong>薔薇と百合の中庭</strong><small>季節の花と、午後のひととき。</small></figcaption></figure>
-        <figure class="gallery-scene gallery-salon" id="salon" data-reveal><img src="assets/images/rose-salon.svg" alt="窓辺と花のある女學生たちのサロン" loading="lazy" width="760" height="520"><figcaption><span class="gallery-no">03 / THE SALON</span><strong>談話のサロン</strong><small>言葉を交わし、心を通わせる。</small></figcaption></figure>
-        <figure class="gallery-scene gallery-atelier" id="atelier" data-reveal><img src="assets/images/rose-atelier.svg" alt="ピアノとイーゼルを備えた藝術教室" loading="lazy" width="760" height="520"><figcaption><span class="gallery-no">04 / THE ATELIER</span><strong>音楽と藝術の教室</strong><small>感性を磨き、表現を育てる。</small></figcaption></figure>
+        <figure class="gallery-scene gallery-library" id="library" data-reveal><button class="gallery-open" type="button" aria-label="拡大して見る：薔薇窓から光が差す大図書館"><img src="assets/images/rose-library.svg" alt="薔薇窓から光が差す大図書館" loading="lazy" width="760" height="520"></button><figcaption><span class="gallery-no">01 / THE LIBRARY</span><strong>薔薇窓の大図書館</strong><small>静けさのなかに、無数の世界がひらく。</small></figcaption></figure>
+        <figure class="gallery-scene gallery-garden" id="garden" data-reveal><button class="gallery-open" type="button" aria-label="拡大して見る：噴水と薔薇、百合の咲く中庭"><img src="assets/images/rose-courtyard.svg" alt="噴水と薔薇、百合の咲く中庭" loading="lazy" width="760" height="520"></button><figcaption><span class="gallery-no">02 / THE COURTYARD</span><strong>薔薇と百合の中庭</strong><small>季節の花と、午後のひととき。</small></figcaption></figure>
+        <figure class="gallery-scene gallery-salon" id="salon" data-reveal><button class="gallery-open" type="button" aria-label="拡大して見る：窓辺と花のある女學生たちのサロン"><img src="assets/images/rose-salon.svg" alt="窓辺と花のある女學生たちのサロン" loading="lazy" width="760" height="520"></button><figcaption><span class="gallery-no">03 / THE SALON</span><strong>談話のサロン</strong><small>言葉を交わし、心を通わせる。</small></figcaption></figure>
+        <figure class="gallery-scene gallery-atelier" id="atelier" data-reveal><button class="gallery-open" type="button" aria-label="拡大して見る：ピアノとイーゼルを備えた藝術教室"><img src="assets/images/rose-atelier.svg" alt="ピアノとイーゼルを備えた藝術教室" loading="lazy" width="760" height="520"></button><figcaption><span class="gallery-no">04 / THE ATELIER</span><strong>音楽と藝術の教室</strong><small>感性を磨き、表現を育てる。</small></figcaption></figure>
       </div>
       <div class="gallery-footnote"><span>❦</span> THE PLACES WHERE OUR DAYS BLOOM <span>❦</span></div>
     </section>
@@ -310,6 +310,7 @@
     </section>
   </main>
 
+<dialog class="art-lightbox" id="art-lightbox" aria-label="學院風景の拡大表示"><form method="dialog"><button class="lightbox-close" aria-label="閉じる">閉じる　×</button></form><img alt=""><p class="lightbox-caption"></p></dialog>
   <footer class="site-footer">
     <div class="footer-ornament" aria-hidden="true">❦</div>
     <a class="footer-crest" href="#top" aria-label="ページ上部へ">❀</a>
