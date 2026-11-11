@@ -52,7 +52,6 @@
     button.type = "button";
     button.className = "passport-item";
     const title = document.createElement("strong");
-    addRecent(record.id);
     title.textContent = record.title;
     const meta = document.createElement("small");
     meta.textContent = kind === "saved" ? "MY COLLECTION　·　収蔵資料" : "RECENT　·　最近ひらいた頁";
@@ -92,7 +91,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url; link.download = "hinomoto-reader-passport.json";
-    document.body.append(link); link.click(); link.remove(); URL.revokeObjectURL(url);
+    document.body.append(link); link.click(); link.remove(); window.setTimeout(()=>URL.revokeObjectURL(url),1000);
   });
   document.getElementById("passport-clear")?.addEventListener("click",()=>{
     pass = emptyPass(); persist(); renderPassport();
@@ -123,7 +122,6 @@
     category = button.dataset.archiveFilter || "all";
     filters.forEach(item => item.setAttribute("aria-pressed",String(item===button)));
     render();
-  renderPassport();
   }));
   search?.addEventListener("input",render);
   document.addEventListener("keydown",event => {
@@ -183,6 +181,7 @@
     current = Math.max(0,Math.min(records.length-1,index));
     const record = records[current];
     if (!record || !dialog) return;
+    addRecent(record.id);
     title.textContent = record.title;
     klass.textContent = record.category + "　·　OPEN COLLECTION";
     description.textContent = record.description;
@@ -250,4 +249,5 @@
     viewer.addEventListener("click",event=>{if(event.target===viewer)viewer.close();});
   }
   render();
+  renderPassport();
 })();
