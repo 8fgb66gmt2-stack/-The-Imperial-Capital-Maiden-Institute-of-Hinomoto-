@@ -12,6 +12,7 @@
  const now=new Date();
  const tokyoMonth=Number(new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",month:"numeric"}).format(now));
  const season=seasonFor(tokyoMonth);
+ hero.dataset.season=season.name;
  const seal=document.createElement("div");
  seal.className="hero-season-seal";
  seal.setAttribute("aria-label","本日の季節："+season.name);
@@ -22,6 +23,7 @@
  if(visual)visual.append(seal);
  const front=document.createElement("section");
  front.className="frontispiece";
+ front.dataset.season=season.name;
  front.setAttribute("aria-labelledby","frontispiece-title");
  front.innerHTML=
  '<div class="frontispiece-index"><p class="frontispiece-kicker">THE IMPERIAL CAPITAL · A GUIDE TO THE INSTITUTE</p>'+
@@ -45,7 +47,15 @@
  seasonGlyph.textContent=season.glyph;
  $(".observatory-date",front).textContent=dateFormatter.format(now)+" · "+monthNames[tokyoMonth-1];
  const clock=$(".observatory-time",front);
- const update=()=>{clock.textContent=timeFormatter.format(new Date());};
+ const hourFormatter=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",hour:"numeric",hourCycle:"h23"});
+ const update=()=>{
+  const current=new Date();
+  clock.textContent=timeFormatter.format(current);
+  const hour=Number(hourFormatter.format(current));
+  const period=hour<6?"night":hour<11?"morning":hour<17?"day":hour<20?"dusk":"night";
+  hero.dataset.period=period;
+  front.dataset.period=period;
+ };
  update();
  window.setInterval(update,1000);
  const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
