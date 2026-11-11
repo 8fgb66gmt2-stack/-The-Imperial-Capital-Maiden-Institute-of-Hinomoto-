@@ -94,7 +94,7 @@ p,li,dd{font-size:16px}
 .archive-book-controls{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #d8c7a5;color:#8b7452;font:11px "Cormorant Garamond",Georgia,serif;letter-spacing:.15em}
 .archive-book-controls button{min-height:40px;padding:7px 12px;border:1px solid #c9b58b;background:#fffdf7;color:#704655;font:12px "Shippori Mincho",serif;cursor:pointer}
 .archive-book-controls button:disabled{opacity:.38;cursor:not-allowed}
-.archive-book-watermark{position:absolute;right:8%;bottom:12%;color:#a98e6810;font:clamp(140px,22vw,240px Georgia,serif);pointer-events:none}
+.archive-book-watermark{position:absolute;right:8%;bottom:12%;color:#a98e6810;font-size:clamp(140px,22vw,240px);font-family:Georgia,serif;pointer-events:none}
 .archive-book-dialog.page-turning .archive-book-content{animation:archivePageTurn .42s ease both}
 @keyframes archivePageTurn{0%{opacity:.25;transform:translateX(13px) rotateY(-3deg)}100%{opacity:1;transform:none}}
 .portrait-viewer{width:min(780px,calc(100% - 30px));padding:58px 24px 28px;background:#f7f0e3}
