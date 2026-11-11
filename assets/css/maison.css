@@ -221,7 +221,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 
 /* GRAND SALON — monumental editorial treatment */
 .hero.hero-grand{position:relative;isolation:isolate;overflow:hidden}
-.hero.hero-grand:after{content:"";z-index:-1;pointer-events:none;background:radial-gradient(circle at 78% 48%,#ffffff70 0 18%,transparent 42%),repeating-linear-gradient(135deg,transparent 0 22px,#b89b6b0a 23px 24px)}
+.hero.hero-grand:after{content:"";z-index:0;pointer-events:none;background:radial-gradient(circle at 78% 48%,#ffffff70 0 18%,transparent 42%),repeating-linear-gradient(135deg,transparent 0 22px,#b89b6b0a 23px 24px)}
 .hero-engraving{position:absolute;z-index:0;top:7%;left:50%;transform:translateX(-50%);width:max-content;max-width:90%;font:clamp(11px,1.2vw,16px) "Cormorant Garamond",Georgia,serif;letter-spacing:.48em;color:#9b805329;white-space:nowrap;pointer-events:none}
 .hero-copy,.hero-visual{position:relative;z-index:1}
 .hero-grand .visual-mat{position:relative}
@@ -245,7 +245,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 .faculty-section{width:100%;max-width:none;padding-inline:max(7%,calc((100% - 1280px)/2));background:radial-gradient(ellipse at 8% 30%,#eee2d780,transparent 34%),radial-gradient(ellipse at 92% 70%,#e7e8dc88,transparent 36%),#fbf8f0}
 .faculty-heading-wrap{padding-block:10px 42px}
 .faculty-heading-wrap .section-heading:after{width:110px}
-.faculty-indexbar{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);box-shadow:0 10px 28px #5946380a}
+.faculty-indexbar{position:relative;z-index:2;backdrop-filter:blur(14px);box-shadow:0 10px 28px #5946380a}
 .faculty-entry{position:relative;overflow:hidden;isolation:isolate;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
 .faculty-entry:hover{transform:translateY(-5px);box-shadow:0 34px 78px #4e3a2e20}
 .faculty-entry:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.35;background:linear-gradient(115deg,transparent 0 58%,#fff8ed 100%)}
