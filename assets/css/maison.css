@@ -212,3 +212,9 @@ a,button{-webkit-tap-highlight-color:transparent}
  .site-header,.utility-bar,.menu-toggle,.atelier-reading-progress{display:none!important}
  .section-wrap,.story-body{width:100%;max-width:none;box-shadow:none}
 }
+
+.maison-reading-progress{position:fixed;z-index:9999;top:0;left:0;width:100%;height:3px;transform:scaleX(0);transform-origin:left center;pointer-events:none;background:linear-gradient(90deg,#718578 0%,#b69a6c 48%,#a65c6b 100%);box-shadow:0 1px 5px #67493a22}
+.maison-ready .hero-copy,.maison-ready .hero-visual{animation:maison-enter .85s cubic-bezier(.2,.7,.2,1) both}
+.maison-ready .hero-visual{animation-delay:.12s}
+@keyframes maison-enter{from{opacity:.35;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.maison-ready .hero-copy,.maison-ready .hero-visual{animation:none}.maison-reading-progress{transition:none}}
