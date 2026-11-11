@@ -26,10 +26,10 @@
   const readPass = () => {
     try {
       const value = JSON.parse(window.localStorage.getItem(key) || "null");
-      if (!value || typeof value !== "object") return {saved:[],completed:[],opened:[],recent:[],bookmarks:[],progress:{}};
+      if (!value || typeof value !== "object") return {saved:[],completed:[],opened:[],recent:[]};
       const list = name => Array.isArray(value[name]) ? [...new Set(value[name].filter(id=>typeof id==="string"))] : [];
-      return {saved:list("saved"),completed:list("completed"),opened:list("opened"),recent:list("recent"),bookmarks:Array.isArray(value.bookmarks)?value.bookmarks.filter(item=>item&&typeof item.workId==="string"&&Number.isFinite(item.page)):[],progress:value.progress&&typeof value.progress==="object"?value.progress:{}};
-    } catch (_) { return {saved:[],completed:[],opened:[],recent:[],bookmarks:[],progress:{}}; }
+      return {saved:list("saved"),completed:list("completed"),opened:list("opened"),recent:list("recent")};
+    } catch (_) { return {saved:[],completed:[],opened:[],recent:[]}; }
   };
   const writePass = pass => {
     try { window.localStorage.setItem(key,JSON.stringify(pass)); return true; }
