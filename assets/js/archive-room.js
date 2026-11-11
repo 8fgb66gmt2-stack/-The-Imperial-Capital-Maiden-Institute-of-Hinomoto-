@@ -12,9 +12,9 @@
     {id:"haruakari",title:"春燈",category:"文学 · LITERARY RECORD",description:"六條杠葉と有栖川劉ノ介。創設者夫妻の暮らしと、互いの自由を尊ぶ姿を描く独立した読み物。",note:"春の雨が降る帝都のある一日。學院での出来事を語る杠葉と、その言葉に耳を傾ける劉ノ介。本文は独立した読み物として、原資料の頁でお読みいただけます。",href:"haruakari.html",related:["founder","philosophy"]},
     {id:"campus",title:"學び舎の施設案内",category:"施設 · CAMPUS",description:"學院の施設と、校内案内に収められた場所ごとの紹介。",note:"校内案内では、大図書館、講堂、中庭、藝術教室、音楽室など、學院の日々を支える場所を紹介しています。",href:"#campus",related:["gallery","philosophy"]},
     {id:"gallery",title:"校内風景・圖版",category:"施設 · VISUAL RECORDS",description:"薔薇窓の図書館、中庭、サロン、藝術教室。學び舎の風景を収めた圖版。",note:"學院の風景を描いた圖版は、各場面を拡大して鑑賞できます。",href:"#library",related:["campus","philosophy"]},
-    {id:"circus",title:"『circus』",category:"文学 · BIBLIOGRAPHY",description:"中原壱葉の教職員録に記載される代表作。人物記録と結び付く書名索引。",note:"教職員録に代表作として記載された『circus』。中原壱葉の人物記録と書名を結び付ける書誌索引として収録しています。",href:"literature.html#circus",related:["ichiha","curriculum"]},
-    {id:"nihon-kaidan",title:"『日ノ本ノ怪談』",category:"文学 · BIBLIOGRAPHY",description:"中原八雲の代表作として教職員録に記載される作品の書名索引。",note:"教職員録に代表作として記載された『日ノ本ノ怪談』。中原八雲の人物記録と書名を結び付ける書誌索引として収録しています。",href:"literature.html#nihon-kaidan",related:["yakumo","curriculum"]},
-    {id:"haru-wo-matsu-jin",title:"『春を待つ仁』",category:"文学 · FOUNDER'S WORK",description:"創設者・六條杠葉の代表作として人物記録に記載される書名索引。",note:"創設者・六條杠葉の代表作として記載される『春を待つ仁』。人物記録と結び付けた書名索引として収録しています。",href:"literature.html#haru-wo-matsu-jin",related:["founder","haruakari"]}
+    {id:"circus",title:"『circus』",category:"文学 · BIBLIOGRAPHY",description:"中原壱葉による散文詩。笑い声の奥に残る孤独と、幕の内側にいる者の独白。",note:"『circus』は、舞台で笑う者と、舞台を降りた後の孤独を描く散文詩です。作品本文を作品文庫でお読みいただけます。",href:"literature.html#circus",related:["ichiha","curriculum"]},
+    {id:"nihon-kaidan",title:"『日ノ本ノ怪談』",category:"文学 · BIBLIOGRAPHY",description:"中原八雲による怪異譚「沖の灯」。海辺の村に残る、帰らぬ人をめぐる静かな物語。",note:"『日ノ本ノ怪談』より「沖の灯」。海辺の村で語られる、帰らぬ人を待つ灯の物語です。作品文庫で本文をお読みいただけます。",href:"literature.html#nihon-kaidan",related:["yakumo","curriculum"]},
+    {id:"haru-wo-matsu-jin",title:"『春を待つ仁』",category:"文学 · FOUNDER'S WORK",description:"六條杠葉による連作歌篇。人を人として遇する心と、誰もが自らの春を選ぶことを詠む。",note:"『春を待つ仁』は、人の尊厳と学ぶ自由、そして誰もが自らの季節を選ぶことを詠んだ連作歌篇です。作品文庫で本文をお読みいただけます。",href:"literature.html#haru-wo-matsu-jin",related:["founder","haruakari"]}
   ];
   const byId = new Map(records.map((record,index)=>[record.id,{...record,index}]));
   const storageKey = "hinomoto-maiden-institute-reader-pass-v1";

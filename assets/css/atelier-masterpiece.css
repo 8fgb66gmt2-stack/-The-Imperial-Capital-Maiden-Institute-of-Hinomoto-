@@ -186,3 +186,8 @@ p,li,dd{font-size:16px}
 .archive-room-foot-links a{color:#855362;text-decoration:none}
 .archive-room-foot-links a:hover{text-decoration:underline}
 @media(max-width:760px){.archive-room-foot-links{align-items:flex-start;flex-direction:column;gap:8px}}
+
+/* Links from biography records to the full works */
+a.archive-work-link{color:#80505d;text-decoration:underline;text-decoration-color:#c9b48d;text-decoration-thickness:1px;text-underline-offset:4px}
+a.archive-work-link:hover{color:#593744;text-decoration-color:#80505d}
+a.archive-work-link:focus-visible{outline:3px solid #875267;outline-offset:3px}
