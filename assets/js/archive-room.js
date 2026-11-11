@@ -86,14 +86,14 @@
       bookmarkList.replaceChildren();
       const marks = pass.bookmarks.filter(item=>byId.has(item.workId)).slice(0,6);
       if (!marks.length) { const p=document.createElement("p");p.className="passport-empty";p.textContent="栞を挟んだ頁はまだありません。作品文庫で頁をひらいてください。";bookmarkList.append(p); }
-      marks.forEach(mark=>{const record=byId.get(mark.workId);const a=document.createElement("a");a.className="passport-item";a.href=record.href;const strong=document.createElement("strong");strong.textContent=record.title+"　—　"+String(mark.page+1).padStart(2,"0")+"見開き";const small=document.createElement("small");small.textContent="BOOKMARK　·　栞を挟んだ頁";a.append(strong,small);bookmarkList.append(a);});
+      marks.forEach(mark=>{const record=byId.get(mark.workId);const a=document.createElement("a");a.className="passport-item";a.href="literature.html?read="+encodeURIComponent(mark.workId)+"&page="+encodeURIComponent(mark.page+1)+"#"+encodeURIComponent(mark.workId);const strong=document.createElement("strong");strong.textContent=record.title+"　—　"+String(mark.page+1).padStart(2,"0")+"見開き";const small=document.createElement("small");small.textContent="BOOKMARK　·　栞を挟んだ頁";a.append(strong,small);bookmarkList.append(a);});
     }
     const progressList = document.getElementById("passport-progress-list");
     if (progressList) {
       progressList.replaceChildren();
       const entries = Object.entries(pass.progress||{}).filter(([id])=>byId.has(id));
       if (!entries.length) { const p=document.createElement("p");p.className="passport-empty";p.textContent="読書を始めると、ここに進捗が記録されます。";progressList.append(p); }
-      entries.forEach(([id,item])=>{const a=document.createElement("a");a.className="passport-item";a.href=byId.get(id).href;const strong=document.createElement("strong");strong.textContent=byId.get(id).title;const small=document.createElement("small");small.textContent="READING　·　"+(item.page||1)+" / "+(item.total||1)+"見開き";a.append(strong,small);progressList.append(a);});
+      entries.forEach(([id,item])=>{const a=document.createElement("a");a.className="passport-item";a.href="literature.html?read="+encodeURIComponent(id)+"&page="+encodeURIComponent(item.page||1)+"#"+encodeURIComponent(id);const strong=document.createElement("strong");strong.textContent=byId.get(id).title;const small=document.createElement("small");small.textContent="READING　·　"+(item.page||1)+" / "+(item.total||1)+"見開き";a.append(strong,small);progressList.append(a);});
     }
     const note = document.getElementById("passport-storage-note");
     if (note) note.textContent = storageAvailable ? "記録はこのブラウザ内に保存されます。外部へ送信されません。" : "保存領域を利用できません。現在の閲覧は引き続き可能です。";

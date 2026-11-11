@@ -98,11 +98,11 @@
     const p=readPass(),has=p.bookmarks.some(b=>b.workId===currentId&&b.page===pageIndex);
     const b=$("#reader-bookmark",dialog);b.setAttribute("aria-pressed",String(has));b.textContent=has?"✓ この頁に栞を挟みました":"栞を挟む";
   };
-  const openBook=id=>{
+  const openBook=(id,requestedPage)=>{
     if(!workMeta[id])return;
     currentId=id;pages=makePages(id);
     const p=readPass(),saved=p.progress[id];
-    pageIndex=Math.max(0,Math.min(pages.length-1,(saved?.page||1)-1));
+    const resumePage=Number.isInteger(requestedPage)?requestedPage:(saved?.page||1);pageIndex=Math.max(0,Math.min(pages.length-1,resumePage-1));
     shell.dataset.readerTheme=workMeta[id].theme;
     $("#reader-book-label",dialog).textContent=workMeta[id].author+"　／　"+workMeta[id].title+"　·　"+workMeta[id].form;
     touch(id);renderPage();
@@ -130,6 +130,10 @@
     if(e.key==="ArrowRight"&&pageIndex<pages.length-1){e.preventDefault();pageIndex++;renderPage();}
   });
   window.addEventListener("resize",()=>{if(dialog.open)renderPage();});
+  const requested=new URLSearchParams(window.location.search);
+  const requestedWork=requested.get("read");
+  const requestedPage=Number(requested.get("page"));
+  if(workMeta[requestedWork])openBook(requestedWork,Number.isFinite(requestedPage)&&requestedPage>0?requestedPage:undefined);
   updateFavorites();
   window.addEventListener("pageshow",updateFavorites);
 })();
