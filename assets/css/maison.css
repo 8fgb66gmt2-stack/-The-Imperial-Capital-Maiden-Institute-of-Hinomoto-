@@ -218,3 +218,67 @@ a,button{-webkit-tap-highlight-color:transparent}
 .maison-ready .hero-visual{animation-delay:.12s}
 @keyframes maison-enter{from{opacity:.35;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.maison-ready .hero-copy,.maison-ready .hero-visual{animation:none}.maison-reading-progress{transition:none}}
+
+/* GRAND SALON — monumental editorial treatment */
+.hero.hero-grand{position:relative;isolation:isolate;overflow:hidden}
+.hero.hero-grand:after{content:"";z-index:-1;pointer-events:none;background:radial-gradient(circle at 78% 48%,#ffffff70 0 18%,transparent 42%),repeating-linear-gradient(135deg,transparent 0 22px,#b89b6b0a 23px 24px)}
+.hero-engraving{position:absolute;z-index:0;top:7%;left:50%;transform:translateX(-50%);width:max-content;max-width:90%;font:clamp(11px,1.2vw,16px) "Cormorant Garamond",Georgia,serif;letter-spacing:.48em;color:#9b805329;white-space:nowrap;pointer-events:none}
+.hero-copy,.hero-visual{position:relative;z-index:1}
+.hero-grand .visual-mat{position:relative}
+.hero-grand .visual-mat:before{content:"";position:absolute;inset:5%;border:1px solid #fffdf0a8;pointer-events:none;z-index:1}
+.hero-grand .visual-mat img{display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1),filter .8s}
+.hero-grand .hero-visual:hover .visual-mat img{transform:scale(1.025);filter:saturate(1.08)}
+.hero-grand .hero-visual:after{content:"❦";position:absolute;right:-34px;bottom:-44px;font:100px Georgia,serif;color:#9c7c5430;pointer-events:none}
+.hero-actions .button-primary{box-shadow:0 10px 24px #70465524;transition:transform .3s,box-shadow .3s}
+.hero-actions .button-primary:hover{transform:translateY(-3px);box-shadow:0 16px 30px #70465530}
+.announcement-ribbon{position:relative;overflow:hidden}
+.announcement-ribbon:before,.announcement-ribbon:after{content:"✧　❦　✧　❦　✧";position:absolute;top:50%;transform:translateY(-50%);font:14px "Cormorant Garamond",serif;letter-spacing:.5em;color:#f4e5c555;white-space:nowrap;pointer-events:none}
+.announcement-ribbon:before{left:2%}.announcement-ribbon:after{right:2%}
+.section-heading{position:relative}
+.section-heading:after{content:"";display:block;width:72px;height:1px;margin:22px auto 0;background:linear-gradient(90deg,transparent,#b69a6c,transparent)}
+.about-section,.learning-section,.faculty-section,.campus-gallery,.stories-section{overflow:hidden}
+.about-section:before,.learning-section:before,.faculty-section:before,.campus-gallery:before,.stories-section:before{opacity:.19;background-size:auto 78%;filter:sepia(.12)}
+.founder-section{position:relative;isolation:isolate;overflow:hidden}
+.founder-section:after{content:"杠";position:absolute;z-index:-1;right:4%;top:8%;font:clamp(180px,28vw,420px) var(--maison-serif);line-height:1;color:#a98b6820;pointer-events:none}
+.founder-portrait{position:relative;overflow:hidden}
+.founder-portrait:after{content:"";position:absolute;inset:18px;border:1px solid #b99d6b66;pointer-events:none}
+.faculty-section{width:100%;max-width:none;padding-inline:max(7%,calc((100% - 1280px)/2));background:radial-gradient(ellipse at 8% 30%,#eee2d780,transparent 34%),radial-gradient(ellipse at 92% 70%,#e7e8dc88,transparent 36%),#fbf8f0}
+.faculty-heading-wrap{padding-block:10px 42px}
+.faculty-heading-wrap .section-heading:after{width:110px}
+.faculty-indexbar{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);box-shadow:0 10px 28px #5946380a}
+.faculty-entry{position:relative;overflow:hidden;isolation:isolate;transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.faculty-entry:hover{transform:translateY(-5px);box-shadow:0 34px 78px #4e3a2e20}
+.faculty-entry:after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:.35;background:linear-gradient(115deg,transparent 0 58%,#fff8ed 100%)}
+.faculty-entry-grid{grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr);align-items:stretch}
+.faculty-entry-identity-photo{position:relative;min-height:650px;padding:42px 28px 36px;justify-content:center;overflow:hidden}
+.faculty-entry-identity-photo:before{content:"";position:absolute;inset:18px;border:1px solid #b99d6b70;pointer-events:none}
+.faculty-entry-identity-photo:after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(0deg,#70465418,transparent);pointer-events:none}
+.faculty-portrait-frame{position:relative;z-index:1;width:min(100%,360px);padding:12px;background:#fffdf7;box-shadow:0 24px 56px #49372b2c}
+.faculty-portrait-frame img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .8s}
+.faculty-entry:hover .faculty-portrait-frame img{transform:scale(1.025);filter:saturate(1.06)}
+.faculty-identity-caption,.faculty-identity-name,.faculty-identity-vertical,.faculty-identity-bottom{position:relative;z-index:2}
+.faculty-identity-caption{font-size:10px;letter-spacing:.25em}
+.faculty-identity-name{font:12px "Cormorant Garamond",Georgia,serif;letter-spacing:.28em}
+.faculty-entry-copy{align-self:center;max-width:760px}
+.faculty-name-header{padding-bottom:24px;border-bottom:1px solid #d8c8aa}
+.faculty-name-header h3{line-height:1.4}
+.faculty-entry-lead{margin-top:28px}
+.faculty-detail-heading{margin-top:38px}
+.faculty-entry-footer{position:relative;z-index:2}
+.faculty-entry-yakumo .faculty-entry-identity-photo{background:linear-gradient(145deg,#e7eadf,#fffdf4 56%,#e6e5d8)}
+.faculty-entry-ichiha .faculty-entry-identity-photo{background:linear-gradient(145deg,#f0e1dc,#fffaf1 56%,#e8d9d1)}
+.life-section,.archives-section{position:relative;isolation:isolate;overflow:hidden}
+.life-section:before,.archives-section:before{content:"";position:absolute;z-index:-1;inset:0;opacity:.13;background:url("../images/rose-vine.svg") no-repeat -4% center/auto 100%;pointer-events:none}
+.campus-explorer{position:relative;overflow:hidden}
+.campus-explorer:after{content:"HINOMOTO";position:absolute;right:2%;bottom:-.3em;font:clamp(70px,12vw,170px) "Cormorant Garamond",Georgia,serif;letter-spacing:.18em;color:#9c80500b;pointer-events:none}
+.campus-plan{box-shadow:inset 0 0 0 7px #fffaf0,inset 0 0 0 8px #c5ae83,0 20px 48px #4c382b18}
+.gallery-scene{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.gallery-scene:hover{transform:translateY(-6px);box-shadow:0 30px 68px #4d392b24}
+.story-feature{position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.story-feature:hover{transform:translateY(-5px);box-shadow:0 32px 76px #4d392b22}
+.story-feature:before{content:"";position:absolute;inset:14px;border:1px solid #c8b08366;pointer-events:none}
+.site-footer{overflow:hidden}
+.site-footer:after{content:"❀　❦　❀";position:absolute;left:50%;bottom:4%;transform:translateX(-50%);font:clamp(40px,7vw,90px) Georgia,serif;letter-spacing:.4em;color:#9a7d5720;white-space:nowrap;pointer-events:none}
+@media(max-width:900px){.faculty-section{padding-inline:0}.faculty-entry-grid{grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr)}.faculty-entry-identity-photo{min-height:560px;padding:30px 20px}.faculty-portrait-frame{width:min(100%,300px)}}
+@media(max-width:650px){.hero-engraving{top:3%;letter-spacing:.22em;font-size:9px}.hero-grand .hero-visual:after{font-size:64px;right:-14px;bottom:-30px}.announcement-ribbon:before,.announcement-ribbon:after{display:none}.faculty-section{padding-inline:0}.faculty-indexbar{position:relative;top:auto}.faculty-entry-grid{grid-template-columns:1fr}.faculty-entry-identity-photo{min-height:0;padding:34px 22px 30px}.faculty-portrait-frame{width:min(76%,280px)}.faculty-entry-copy{padding:30px 24px 38px}.faculty-entry-footer{padding:16px 20px;gap:8px;flex-wrap:wrap}.founder-section:after{right:-4%;top:2%;font-size:190px}.section-heading:after{margin-top:16px}}
+@media(prefers-reduced-motion:reduce){.hero-grand .visual-mat img,.faculty-entry,.faculty-portrait-frame img,.gallery-scene,.story-feature,.hero-actions .button-primary{transition:none!important}.faculty-entry:hover,.gallery-scene:hover,.story-feature:hover,.hero-actions .button-primary:hover{transform:none}}
