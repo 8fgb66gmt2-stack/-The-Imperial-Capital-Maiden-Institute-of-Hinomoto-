@@ -1,0 +1,135 @@
+/* REIRO ROMANTIC — editorial finish and accessible digital archive */
+:root{
+  --master-ivory:#fbf8f0;--master-paper:#fffdf7;--master-gold:#b79a68;
+  --master-gold-soft:#dfd0b1;--master-wine:#704655;--master-rose:#a65e70;
+  --master-jade:#778b78;--master-ink:#493d3d;--master-muted:#756866;
+}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{font-size:16px;line-height:2.05;color:var(--master-ink)}
+p,li,dd{font-size:16px}
+.section-wrap{width:min(1320px,88%);max-width:1320px}
+.section-heading h2{line-height:1.55}
+.about-lead>p:not(.eyebrow-small),.founder-copy>p:not(.section-index):not(.eyebrow-small):not(.founder-title):not(.founder-quote),
+.philosophy-copy p,.life-note p,.campus-feature-copy>p:not(.eyebrow-small),
+.archive-copy>p:not(.eyebrow-small),.curriculum-intro-grid p,.field-copy>p:not(.field-en),
+.story-body p{max-width:70ch;font-size:16px;line-height:2.25;color:#493e3e}
+.faculty-entry-biography{font-size:16px;line-height:2.25;color:#45393a}
+.faculty-data-grid dt,.faculty-data-grid dd{font-size:15px}
+.notice-row,.notice-foot{font-size:15px;line-height:2}
+.hero.hero-grand{min-height:min(850px,calc(100svh - 120px));isolation:isolate}
+.hero.hero-grand:after{z-index:-1}
+.hero-grand .hero-visual{position:relative;isolation:isolate}
+.hero-grand .hero-visual:after{content:"";position:absolute;right:-22px;bottom:-22px;width:104px;height:104px;background:url("../images/institute-crest.svg") center/contain no-repeat;filter:drop-shadow(0 8px 10px #4c352322);opacity:.94;pointer-events:none;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.hero-grand .hero-visual:hover:after{transform:rotate(9deg) scale(1.04)}
+.hero-grand .visual-mat img{display:block;width:100%;aspect-ratio:1.58;object-fit:cover}
+.brand-crest{transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+.brand:hover .brand-crest{transform:rotate(8deg);filter:drop-shadow(0 5px 8px #6b4b3525)}
+.global-nav a{position:relative}
+.global-nav a:focus-visible,.brand:focus-visible,.archive-record:focus-visible{outline:3px solid #8a5363;outline-offset:5px}
+.archive-reading-room{position:relative;max-width:1160px;margin:clamp(54px,7vw,88px) auto 0;padding:clamp(24px,4vw,54px);border:1px solid #bca276;background:linear-gradient(145deg,#fffdf8 0%,#f7efe4 52%,#fffaf1 100%);box-shadow:0 28px 70px #49382c12,inset 0 0 0 7px #fffaf4,inset 0 0 0 8px #e1d2b6;overflow:hidden}
+.archive-reading-room:before,.archive-reading-room:after{content:"";position:absolute;pointer-events:none;opacity:.24}
+.archive-reading-room:before{inset:17px;border:1px solid #bda476}
+.archive-reading-room:after{width:240px;height:240px;right:-95px;top:-100px;border:1px solid #bda476;border-radius:50%;box-shadow:0 0 0 14px #bda4760c,0 0 0 30px #bda4760a}
+.archive-room-heading{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 116px;gap:28px;align-items:center;padding-bottom:28px;border-bottom:1px solid #d9c9a9}
+.archive-room-kicker{margin:0 0 10px;font:10px/1.5 "Cormorant Garamond",Georgia,serif;letter-spacing:.23em;color:#92764d}
+.archive-room-heading h3{margin:0;color:#704655;font:500 clamp(25px,3vw,38px)/1.55 "Shippori Mincho",serif;letter-spacing:.12em}
+.archive-room-heading h3 em{font-style:normal;color:#9a5c6a}
+.archive-room-heading p:last-child{max-width:65ch;margin:12px 0 0;color:#594b4a;font-size:15px;line-height:2.15}
+.archive-room-seal{display:grid;justify-items:center;gap:4px;color:#90754e;font:9px/1.5 "Cormorant Garamond",Georgia,serif;letter-spacing:.15em;text-align:center}
+.archive-room-seal img{width:82px;height:82px;filter:drop-shadow(0 5px 8px #4b39221a)}
+.archive-tools{position:relative;z-index:1;padding:27px 0 18px}
+.archive-search-label{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;color:#704655;font-size:14px;letter-spacing:.12em}
+.archive-search-label span,.archive-filter-heading span:last-child{font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;color:#9a8668}
+.archive-search-wrap{display:flex;align-items:center;gap:12px;max-width:700px;padding:0 15px;border:1px solid #c9b68e;background:#fffdf8;box-shadow:inset 0 2px 6px #4a38200a}
+.archive-search-wrap>span{font-size:23px;color:#967b54}
+.archive-search-wrap input{width:100%;min-width:0;min-height:49px;border:0;outline:0;background:transparent;color:#493d3d;font:15px "Shippori Mincho",serif}
+.archive-search-wrap input::placeholder{color:#9b8b80}
+.archive-search-wrap:focus-within{outline:3px solid #8a536344;outline-offset:2px;border-color:#895564}
+.archive-search-wrap kbd{padding:2px 7px;border:1px solid #d7c8ad;background:#f8f2e8;color:#8b7862;font:11px Georgia,serif}
+.archive-filter-heading{display:flex;justify-content:space-between;max-width:700px;margin:22px 0 9px;color:#75535c;font-size:13px;letter-spacing:.12em}
+.archive-filters{display:flex;flex-wrap:wrap;gap:8px}
+.archive-filters button{min-height:40px;padding:7px 13px;border:1px solid #d1c09f;background:#fffdf7;color:#685451;font:13px "Shippori Mincho",serif;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.archive-filters button small{margin-left:8px;color:#9b896c;font:9px "Cormorant Garamond",Georgia,serif;letter-spacing:.12em}
+.archive-filters button:hover,.archive-filters button[aria-pressed=true]{border-color:#8b5b66;background:#754655;color:#fffaf1}
+.archive-filters button[aria-pressed=true] small{color:#ead9bd}
+.archive-results-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:15px 0 11px;border-top:1px solid #ded0b5;color:#846d57;font-size:12px;letter-spacing:.08em}
+.archive-results-head span:last-child{font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.19em;color:#9a8668}
+.archive-record-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.archive-record{position:relative;display:flex;min-width:0;min-height:236px;flex-direction:column;padding:20px 18px 16px;border:1px solid #d5c5a7;background:linear-gradient(155deg,#fffefa,#f8f1e7);color:#493d3d;text-decoration:none;box-shadow:0 8px 22px #4a38200a;transition:transform .28s,border-color .28s,box-shadow .28s,background .28s}
+.archive-record:before{content:"";position:absolute;inset:5px;border:1px solid #e8ddc8;pointer-events:none}
+.archive-record:hover{transform:translateY(-4px);border-color:#aa8c5f;box-shadow:0 16px 32px #4a382018;background:linear-gradient(155deg,#fffefa,#f3e8e1)}
+.archive-record[hidden]{display:none}
+.archive-record-number{color:#9b835d;font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.17em}
+.archive-record-category{margin-top:14px;color:#a05f6d;font-size:10px;letter-spacing:.12em}
+.archive-record strong{display:block;margin:8px 0 6px;color:#704655;font:500 17px/1.7 "Shippori Mincho",serif;letter-spacing:.055em}
+.archive-record-summary{color:#5e5150;font-size:13px;line-height:1.95}
+.archive-record-open{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:14px;color:#8d6f4f;font-size:12px;letter-spacing:.12em}
+.archive-record-open i{font-style:normal;font-size:17px;transition:transform .2s}
+.archive-record:hover .archive-record-open i{transform:translate(3px,-3px)}
+.archive-empty{margin:16px 0 0;padding:22px;border:1px dashed #cdbb98;color:#6f5b57;text-align:center}
+.archive-room-foot{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:22px;padding-top:14px;border-top:1px solid #dfd1b7;color:#827367;font-size:12px}
+.archive-room-foot a{color:#855362;text-decoration:none}
+.archive-room-foot a:hover{text-decoration:underline}
+.archive-room-foot i{font-style:normal}
+.archive-book-dialog,.portrait-viewer{width:min(860px,calc(100% - 30px));max-width:860px;max-height:88svh;margin:auto;padding:0;overflow:auto;border:1px solid #b99b69;background:#f7f0e3;color:#493d3d;box-shadow:0 35px 100px #261b1b55}
+.archive-book-dialog::backdrop,.portrait-viewer::backdrop{background:#33272a99;backdrop-filter:blur(4px)}
+.archive-book-frame{position:relative;min-height:560px;padding:clamp(22px,4vw,46px);background:linear-gradient(90deg,#eadfcf 0,#fffaf0 5%,#fffaf0 49.5%,#e9dece 50%,#fffaf0 51%,#fbf6eb 100%);box-shadow:inset 0 0 0 8px #fffaf2,inset 0 0 0 9px #cbb68b}
+.archive-book-frame:before{content:"";position:absolute;inset:19px;border:1px solid #d7c7a6;pointer-events:none}
+.archive-book-close,.portrait-viewer-close{position:absolute;z-index:3;top:22px;right:24px;border:1px solid #c7b48d;background:#fffdf7;color:#754b58;padding:8px 12px;font:12px "Shippori Mincho",serif;cursor:pointer}
+.archive-book-topline{position:relative;display:flex;justify-content:space-between;gap:12px;padding:0 0 13px;border-bottom:1px solid #d8c7a5;color:#9a835c;font:9px "Cormorant Garamond",Georgia,serif;letter-spacing:.17em}
+.archive-book-content{position:relative;z-index:1;width:min(620px,100%);margin:52px auto 35px;padding:0 clamp(8px,3vw,28px)}
+.archive-book-class{color:#a05f6d;font-size:11px;letter-spacing:.16em}
+.archive-book-content h3{margin:12px 0 16px;color:#704655;font:500 clamp(27px,4vw,42px)/1.6 "Shippori Mincho",serif;letter-spacing:.12em}
+.archive-book-description{color:#594a49;font-size:16px;line-height:2.15}
+.archive-book-rule{display:flex;align-items:center;gap:14px;margin:28px 0;color:#a68b5e}
+.archive-book-rule:before,.archive-book-rule:after{content:"";height:1px;flex:1;background:#d4c29d}
+.archive-book-note{padding:0 0 24px;color:#514546;font-size:15px;line-height:2.4}
+.archive-book-related{padding-top:16px;border-top:1px solid #dfd1b8}
+.archive-book-related>span{display:block;margin-bottom:10px;color:#9b805a;font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.18em}
+.archive-book-related>div{display:flex;flex-wrap:wrap;gap:8px}
+.archive-book-related a{padding:6px 10px;border:1px solid #d3c19e;background:#fffdf7;color:#76515c;font-size:12px;text-decoration:none}
+.archive-book-related a:hover{background:#f0e3e0}
+.archive-book-source{display:inline-flex;gap:18px;align-items:center;margin-top:24px;padding:12px 18px;border:1px solid #9b7e59;background:#754655;color:#fffaf1;text-decoration:none;font-size:13px;letter-spacing:.1em}
+.archive-book-source:hover{background:#603746}
+.archive-book-controls{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:16px;border-top:1px solid #d8c7a5;color:#8b7452;font:11px "Cormorant Garamond",Georgia,serif;letter-spacing:.15em}
+.archive-book-controls button{min-height:40px;padding:7px 12px;border:1px solid #c9b58b;background:#fffdf7;color:#704655;font:12px "Shippori Mincho",serif;cursor:pointer}
+.archive-book-controls button:disabled{opacity:.38;cursor:not-allowed}
+.archive-book-watermark{position:absolute;right:8%;bottom:12%;color:#a98e6810;font:clamp(140px,22vw,240px Georgia,serif);pointer-events:none}
+.archive-book-dialog.page-turning .archive-book-content{animation:archivePageTurn .42s ease both}
+@keyframes archivePageTurn{0%{opacity:.25;transform:translateX(13px) rotateY(-3deg)}100%{opacity:1;transform:none}}
+.portrait-viewer{width:min(780px,calc(100% - 30px));padding:58px 24px 28px;background:#f7f0e3}
+.portrait-viewer figure{margin:0;text-align:center}
+.portrait-viewer img{display:block;max-width:100%;max-height:75svh;width:auto;height:auto;margin:auto;border:10px solid #fffaf0;outline:1px solid #b99b69;box-shadow:0 18px 48px #3d2b2430}
+.portrait-viewer figcaption{margin-top:14px;color:#76515c;font-size:13px;letter-spacing:.1em}
+.faculty-portrait-frame img{cursor:zoom-in}
+.archive-book-close:focus-visible,.archive-book-controls button:focus-visible,.archive-filters button:focus-visible,.portrait-viewer-close:focus-visible{outline:3px solid #8a5363;outline-offset:3px}
+@media(max-width:1100px){.archive-record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero.hero-grand{min-height:0}}
+@media(max-width:760px){
+ html{scroll-padding-top:90px}
+ body{font-size:15px;line-height:2}
+ .section-wrap{width:calc(100% - 40px)}
+ .archive-reading-room{margin-top:42px;padding:22px 17px;box-shadow:inset 0 0 0 5px #fffaf4,inset 0 0 0 6px #e1d2b6}
+ .archive-room-heading{grid-template-columns:minmax(0,1fr) 70px;gap:12px}
+ .archive-room-seal img{width:60px;height:60px}
+ .archive-room-heading h3{font-size:24px}
+ .archive-room-heading p:last-child{font-size:14px}
+ .archive-record-grid{grid-template-columns:1fr}
+ .archive-record{min-height:0;padding:18px}
+ .archive-record-summary{font-size:13px}
+ .archive-room-foot{align-items:flex-start;flex-direction:column}
+ .archive-book-frame{min-height:0;padding:23px 18px}
+ .archive-book-topline{padding-right:72px;font-size:8px}
+ .archive-book-content{margin:42px auto 28px}
+ .archive-book-controls button{font-size:11px;padding:6px 8px}
+ .archive-book-controls{font-size:10px}
+ .archive-book-close{top:17px;right:17px;padding:6px 9px;font-size:11px}
+ .portrait-viewer{padding:54px 14px 22px}
+ .portrait-viewer-close{top:14px;right:14px}
+ .hero-grand .hero-visual:after{width:72px;height:72px;right:-10px;bottom:-12px}
+}
+@media(max-width:430px){.archive-room-heading{grid-template-columns:1fr}.archive-room-seal{display:none}.archive-filters button{flex:1 1 auto}.archive-results-head span:last-child{display:none}.archive-book-controls{gap:5px}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .hero-grand .hero-visual:after,.archive-record,.archive-record-open i{transition:none}
+ .archive-book-dialog.page-turning .archive-book-content{animation:none}
+}

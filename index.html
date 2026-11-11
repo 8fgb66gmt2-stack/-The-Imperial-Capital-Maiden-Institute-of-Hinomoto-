@@ -20,6 +20,8 @@
   <script src="assets/js/interactive.js" defer></script>
   <script src="assets/js/experience.js" defer></script>
   <script src="assets/js/maison.js" defer></script>
+  <link rel="stylesheet" href="assets/css/atelier-masterpiece.css?v=20261111-archive-atelier">
+  <script src="assets/js/archive-room.js?v=20261111-archive-room" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -404,6 +406,65 @@
             <a class="text-link" href="haruakari.html">創設者夫妻の記録を読む <span aria-hidden="true">↗</span></a>
           </div>
         </div>
+
+        <section class="archive-reading-room" aria-labelledby="archive-room-title">
+          <div class="archive-room-heading">
+            <div>
+              <p class="archive-room-kicker">THE IMPERIAL INSTITUTE · DIGITAL COLLECTIONS</p>
+              <h3 id="archive-room-title">帝都女學院 <em>デジタル資料館</em></h3>
+              <p>學院に残された言葉と記録を、主題から辿る公開目録。資料を選ぶと、閲覧頁がひらきます。</p>
+            </div>
+            <div class="archive-room-seal" aria-hidden="true"><img src="assets/images/institute-crest.svg" alt=""><span>ARCHIVUM<br>HINOMOTO</span></div>
+          </div>
+          <div class="archive-tools">
+            <label class="archive-search-label" for="archive-search">資料を探す <span>SEARCH THE COLLECTION</span></label>
+            <div class="archive-search-wrap"><span aria-hidden="true">⌕</span><input id="archive-search" type="search" placeholder="資料名・人物名・主題で検索" autocomplete="off"><kbd>/</kbd></div>
+            <div class="archive-filter-heading"><span>資料の系統</span><span>COLLECTION INDEX</span></div>
+            <div class="archive-filters" role="group" aria-label="資料分類">
+              <button type="button" data-archive-filter="all" aria-pressed="true">すべて <small>ALL</small></button>
+              <button type="button" data-archive-filter="理念" aria-pressed="false">理念 <small>PHILOSOPHY</small></button>
+              <button type="button" data-archive-filter="人物" aria-pressed="false">人物 <small>PERSONS</small></button>
+              <button type="button" data-archive-filter="教育" aria-pressed="false">教育 <small>LEARNING</small></button>
+              <button type="button" data-archive-filter="文学" aria-pressed="false">文学 <small>LITERATURE</small></button>
+              <button type="button" data-archive-filter="施設" aria-pressed="false">施設 <small>CAMPUS</small></button>
+            </div>
+          </div>
+          <div class="archive-results-head"><span id="archive-result-count" aria-live="polite">公開目録　08件</span><span>SELECT A RECORD TO OPEN</span></div>
+          <div class="archive-record-grid" id="archive-record-grid">
+            <a class="archive-record" data-record="philosophy" data-category="理念" data-search="教育理念 知を愛し 己の言葉 学問 自由" href="#philosophy"><span class="archive-record-number">COLLECTION　01</span><span class="archive-record-category">理念 · PHILOSOPHY</span><strong>知を愛し、己の言葉を持つ。</strong><span class="archive-record-summary">學院が大切にする、問いを持ち、自ら考え、言葉にするという教育の姿勢。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="founder" data-category="人物" data-search="六條杠葉 創設者 帝國大學 女性學生 曙 有栖川劉ノ介" href="#founder"><span class="archive-record-number">COLLECTION　02</span><span class="archive-record-category">人物 · FOUNDER</span><strong>創設者・六條 杠葉</strong><span class="archive-record-summary">帝國大學初の女性學生であり、帝都女學院を創設した文学者の人物記録。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="curriculum" data-category="教育" data-search="教育課程 四領域 言葉 文学 歴史 思想 芸術 教養 自然 学術" href="curriculum.html"><span class="archive-record-number">COLLECTION　03</span><span class="archive-record-category">教育 · CURRICULUM</span><strong>學びの四つの領域</strong><span class="archive-record-summary">言葉と文学、歴史と思想、芸術と教養、自然と学術。四領域の教育課程。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="ichiha" data-category="人物" data-search="中原壱葉 國語 教師 衣世 circus" href="#faculty-ichiha"><span class="archive-record-number">COLLECTION　04</span><span class="archive-record-category">人物 · PERSONNEL</span><strong>中原 壱葉</strong><span class="archive-record-summary">國語教師。衣世出身。代表作『circus』を持つ教員の人物資料。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="yakumo" data-category="人物" data-search="中原八雲 央語 教師 神武國 日ノ本 怪談" href="#faculty-yakumo"><span class="archive-record-number">COLLECTION　05</span><span class="archive-record-category">人物 · PERSONNEL</span><strong>中原 八雲</strong><span class="archive-record-summary">央語教師。日ノ本の歴史や妖怪、神々を愛する教員の人物資料。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="haruakari" data-category="文学" data-search="春燈 六條杠葉 有栖川劉ノ介 夫妻 逸話 文学" href="haruakari.html"><span class="archive-record-number">COLLECTION　06</span><span class="archive-record-category">文学 · LITERARY RECORD</span><strong>春燈</strong><span class="archive-record-summary">六條杠葉と有栖川劉ノ介。創設者夫妻の暮らしと、互いの自由を尊ぶ姿を描く独立した読み物。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="campus" data-category="施設" data-search="施設案内 校舎 大図書館 講堂 中庭 藝術教室 音楽室" href="#campus"><span class="archive-record-number">COLLECTION　07</span><span class="archive-record-category">施設 · CAMPUS</span><strong>學び舎の施設案内</strong><span class="archive-record-summary">學院の施設と、校内案内に収められた場所ごとの紹介。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="gallery" data-category="施設" data-search="校内風景 薔薇 百合 図書館 回廊 藝術室 写真" href="#library"><span class="archive-record-number">COLLECTION　08</span><span class="archive-record-category">施設 · VISUAL RECORDS</span><strong>校内風景・圖版</strong><span class="archive-record-summary">薔薇窓の図書館、中庭、サロン、藝術教室。學び舎の風景を収めた圖版。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+          </div>
+          <p class="archive-empty" id="archive-empty" hidden>該当する資料は見つかりませんでした。別の言葉、または分類でお探しください。</p>
+          <div class="archive-room-foot"><span>資料の内容は、各原資料の記載に基づいています。</span><a href="#sealed-button">封緘された頁へ <i aria-hidden="true">↗</i></a></div>
+        </section>
+        <dialog class="archive-book-dialog" id="archive-book-dialog" aria-labelledby="archive-book-title">
+          <div class="archive-book-frame">
+            <button class="archive-book-close" type="button" aria-label="閲覧室を閉じる">閉じる <span aria-hidden="true">×</span></button>
+            <div class="archive-book-topline"><span>IMPERIAL CAPITAL MAIDEN INSTITUTE</span><span id="archive-book-number">COLLECTION 01 / 08</span></div>
+            <div class="archive-book-content">
+              <p class="archive-book-class" id="archive-book-class">PHILOSOPHY · OPEN COLLECTION</p>
+              <h3 id="archive-book-title">資料名</h3>
+              <p class="archive-book-description" id="archive-book-description"></p>
+              <div class="archive-book-rule"><span>❦</span></div>
+              <p class="archive-book-note" id="archive-book-note"></p>
+              <div class="archive-book-related"><span>RELATED RECORDS　／　関連資料</span><div id="archive-book-related-list"></div></div>
+              <a class="archive-book-source" id="archive-book-source" href="#philosophy">原資料をひらく <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="archive-book-controls"><button type="button" id="archive-book-prev">← 前の資料</button><span id="archive-book-count" aria-live="polite">01 / 08</span><button type="button" id="archive-book-next">次の資料 →</button></div>
+            <span class="archive-book-watermark" aria-hidden="true">H</span>
+          </div>
+        </dialog>
+        <dialog class="portrait-viewer" id="portrait-viewer" aria-label="教職員肖像写真の拡大表示">
+          <button class="portrait-viewer-close" type="button">閉じる　×</button>
+          <figure><img alt=""><figcaption></figcaption></figure>
+        </dialog>
+
         <div class="sealed-note">
           <span class="sealed-star" aria-hidden="true">✧</span>
           <button id="sealed-button" type="button" aria-expanded="false" aria-controls="sealed-message">封緘された頁 <span aria-hidden="true">＋</span></button>
