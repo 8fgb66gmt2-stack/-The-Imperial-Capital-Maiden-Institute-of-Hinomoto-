@@ -385,3 +385,51 @@ body *::after{
   text-combine-upright:none!important;
 }
 
+
+
+/* FACULTY REGISTER — keep every label genuinely horizontal */
+.faculty-heading-side{
+  writing-mode:horizontal-tb!important;
+  flex-direction:row!important;
+  align-items:center;
+  justify-content:center;
+  width:max-content;
+  max-width:calc(100% - 100px);
+  height:auto;
+  white-space:nowrap;
+}
+.faculty-identity-vertical{
+  position:static!important;
+  inset:auto!important;
+  display:block;
+  width:100%;
+  max-width:none!important;
+  margin:12px 0 0;
+  padding:0;
+  transform:none!important;
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+  white-space:nowrap!important;
+  text-align:center;
+  font-size:10px;
+  letter-spacing:.12em;
+}
+.faculty-subject-seal{
+  width:auto!important;
+  min-width:61px;
+  height:auto!important;
+  min-height:61px;
+  padding:8px 10px;
+  white-space:nowrap;
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+}
+.faculty-subject-seal br{display:none!important}
+@media(max-width:760px){
+  .faculty-heading-side{max-width:calc(100% - 84px);gap:8px!important}
+  .faculty-identity-vertical{font-size:9px}
+}
+@media(max-width:520px){
+  .faculty-subject-seal{min-width:56px;min-height:49px;padding:6px 8px}
+  .faculty-identity-vertical{font-size:9px;letter-spacing:.08em}
+}
