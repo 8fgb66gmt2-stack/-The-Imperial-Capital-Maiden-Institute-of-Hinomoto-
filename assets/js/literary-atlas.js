@@ -59,7 +59,7 @@
   const makePages=id=>{
     const source=$(".literary-volume[data-work-id='"+id+"'] .literary-text");
     if(!source)return [];
-    const nodes=[...source.children];
+    const volume=$("#"+id);const supplement=$(".literary-apparatus",volume);const nodes=[...source.children,...(supplement?[...supplement.children]:[])];
     const chunks=[];
     let current=[];
     nodes.forEach(node=>{

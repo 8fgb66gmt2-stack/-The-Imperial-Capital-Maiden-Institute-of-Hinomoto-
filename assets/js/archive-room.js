@@ -88,6 +88,23 @@
       if (!marks.length) { const p=document.createElement("p");p.className="passport-empty";p.textContent="栞を挟んだ頁はまだありません。作品文庫で頁をひらいてください。";bookmarkList.append(p); }
       marks.forEach(mark=>{const record=byId.get(mark.workId);const a=document.createElement("a");a.className="passport-item";a.href=record.href;const strong=document.createElement("strong");strong.textContent=record.title+"　—　"+String(mark.page+1).padStart(2,"0")+"見開き";const small=document.createElement("small");small.textContent="BOOKMARK　·　栞を挟んだ頁";a.append(strong,small);bookmarkList.append(a);});
     }
+    const authorHistory = document.getElementById("passport-author-history");
+    if (authorHistory) {
+      authorHistory.replaceChildren();
+      const authors = [
+        {name:"六條 杠葉",id:"haru-wo-matsu-jin"},
+        {name:"中原 壱葉",id:"circus"},
+        {name:"中原 八雲",id:"nihon-kaidan"}
+      ];
+      authors.forEach(author=>{
+        const visited=pass.opened.includes(author.id);
+        const completed=pass.completed.includes(author.id);
+        const a=document.createElement("a");a.className="passport-item";a.href="literature.html#"+author.id;
+        const strong=document.createElement("strong");strong.textContent=author.name;
+        const small=document.createElement("small");small.textContent="閲覧 "+(visited?"記録あり":"未閲覧")+"　·　読了 "+(completed?"済":"未読");
+        a.append(strong,small);authorHistory.append(a);
+      });
+    }
     const progressList = document.getElementById("passport-progress-list");
     if (progressList) {
       progressList.replaceChildren();
