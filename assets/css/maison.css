@@ -463,3 +463,158 @@ body *::after{
   writing-mode:horizontal-tb!important;
   text-orientation:mixed!important;
 }
+
+
+/* FACULTY REGISTER — responsive card layout, not a compressed table
+   The former 521–760px rule forced portrait and biography into two narrow
+   columns. Stack them at tablet widths so Japanese text keeps natural lines. */
+#faculty .faculty-register{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  gap:32px!important;
+  width:min(100% - 48px,1120px)!important;
+  max-width:1120px!important;
+  margin:0 auto!important;
+}
+#faculty .faculty-entry{
+  display:block!important;
+  width:100%!important;
+  min-width:0!important;
+}
+#faculty .faculty-entry-grid,
+#faculty .faculty-entry-yakumo .faculty-entry-grid{
+  display:grid!important;
+  grid-template-columns:minmax(250px,.72fr) minmax(0,1.28fr)!important;
+  grid-template-areas:"identity copy"!important;
+  align-items:stretch!important;
+  min-width:0!important;
+}
+#faculty .faculty-entry-yakumo .faculty-entry-grid{
+  grid-template-columns:minmax(0,1.28fr) minmax(250px,.72fr)!important;
+  grid-template-areas:"copy identity"!important;
+}
+#faculty .faculty-entry-identity,
+#faculty .faculty-entry-identity-photo{
+  grid-area:identity!important;
+  min-width:0!important;
+  max-width:none!important;
+}
+#faculty .faculty-entry-copy{
+  grid-area:copy!important;
+  min-width:0!important;
+  width:auto!important;
+  max-width:none!important;
+  overflow-wrap:anywhere;
+}
+#faculty .faculty-name-header{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  flex-wrap:wrap!important;
+  min-width:0!important;
+  gap:18px!important;
+}
+#faculty .faculty-name-header>div{min-width:0!important;flex:1 1 220px}
+#faculty .faculty-subject-seal{
+  display:flex!important;
+  flex:0 0 auto!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:64px!important;
+  min-width:64px!important;
+  height:64px!important;
+  min-height:64px!important;
+  padding:8px!important;
+  white-space:nowrap!important;
+  line-height:1.35!important;
+  writing-mode:horizontal-tb!important;
+}
+#faculty .faculty-subject-seal br{display:none!important}
+#faculty .faculty-data-grid,
+#faculty .faculty-data-grid-yakumo{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:0 18px!important;
+  width:100%!important;
+  min-width:0!important;
+}
+#faculty .faculty-data-grid>div{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:baseline!important;
+  gap:10px!important;
+  min-width:0!important;
+  padding:11px 4px!important;
+}
+#faculty .faculty-data-grid dt{
+  flex:0 0 4.5em!important;
+  min-width:4.5em!important;
+  white-space:nowrap!important;
+  writing-mode:horizontal-tb!important;
+}
+#faculty .faculty-data-grid dd{
+  flex:1 1 auto!important;
+  min-width:0!important;
+  overflow-wrap:anywhere!important;
+  word-break:normal!important;
+  writing-mode:horizontal-tb!important;
+}
+#faculty .faculty-identity-vertical{
+  position:static!important;
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:14px 0 0!important;
+  white-space:normal!important;
+  text-align:center!important;
+  writing-mode:horizontal-tb!important;
+}
+@media(max-width:760px){
+  #faculty{padding-inline:0!important}
+  #faculty .faculty-register{width:calc(100% - 32px)!important;gap:24px!important}
+  #faculty .faculty-entry-grid,
+  #faculty .faculty-entry-yakumo .faculty-entry-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-areas:"identity" "copy"!important;
+  }
+  #faculty .faculty-entry-identity,
+  #faculty .faculty-entry-identity-photo{
+    min-height:0!important;
+    padding:32px 22px 28px!important;
+  }
+  #faculty .faculty-portrait-frame{width:min(72%,290px)!important}
+  #faculty .faculty-entry-copy{
+    padding:30px clamp(22px,5vw,42px) 36px!important;
+  }
+  #faculty .faculty-indexbar{
+    width:calc(100% - 40px)!important;
+    grid-template-columns:1fr auto!important;
+    gap:12px 18px!important;
+  }
+  #faculty .faculty-indexbar-nav{
+    grid-column:1/-1!important;
+    justify-content:flex-start!important;
+    flex-wrap:wrap!important;
+    gap:12px 20px!important;
+  }
+}
+@media(max-width:520px){
+  #faculty .faculty-register{width:calc(100% - 24px)!important}
+  #faculty .faculty-entry-topline{padding:10px 18px!important;flex-wrap:wrap!important}
+  #faculty .faculty-record-status{white-space:normal!important}
+  #faculty .faculty-data-grid,
+  #faculty .faculty-data-grid-yakumo{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+  #faculty .faculty-data-grid>div{
+    display:flex!important;
+    flex-direction:row!important;
+    gap:12px!important;
+  }
+  #faculty .faculty-name-header>div{flex-basis:180px}
+  #faculty .faculty-entry-footer{overflow-wrap:anywhere}
+}
