@@ -136,3 +136,13 @@ body{background:#f4eee3;color:var(--rr-ink);font-kerning:normal;text-rendering:o
 .regalia-petals i:nth-child(3n){background:linear-gradient(145deg,#e3e9dc,#91a28b);width:7px;height:10px}
 @keyframes regalia-fall{0%{transform:translate3d(0,-5vh,0) rotate(0deg);opacity:0}10%{opacity:.38}55%{transform:translate3d(32px,48vh,0) rotate(210deg);opacity:.28}90%{opacity:.16}100%{transform:translate3d(-22px,108vh,0) rotate(390deg);opacity:0}}
 @media(max-width:760px){.regalia-petals{opacity:.65}.regalia-petals i{width:6px;height:9px}}
+
+/* The same ivory architecture receives the light of the current hour and season. */
+.hero-grand[data-period="morning"]{background:radial-gradient(ellipse at 76% 8%,#fffef4 0,transparent 40%),linear-gradient(118deg,#fcfaf2,#f4eadb 58%,#f0e1dc)}
+.hero-grand[data-period="day"]{background:radial-gradient(ellipse at 82% 12%,#fffefa 0,transparent 38%),linear-gradient(118deg,#fbf9f1,#f3eee2 58%,#e9e5d9)}
+.hero-grand[data-period="dusk"]{background:radial-gradient(ellipse at 78% 18%,#f8e7d8 0,transparent 42%),linear-gradient(118deg,#f8f0e6,#eadbd8 60%,#e4d7d5)}
+.hero-grand[data-period="night"]{background:radial-gradient(ellipse at 78% 12%,#e9e4dd 0,transparent 40%),linear-gradient(118deg,#f2eee7,#e9e2dc 58%,#e7d9dc)}
+.frontispiece[data-season="春"] .observatory-season strong{color:#a96375}
+.frontispiece[data-season="夏"] .observatory-season strong{color:#7e9276}
+.frontispiece[data-season="秋"] .observatory-season strong{color:#a47a4d}
+.frontispiece[data-season="冬"] .observatory-season strong{color:#788d9a}
