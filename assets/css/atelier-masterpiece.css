@@ -133,3 +133,50 @@ p,li,dd{font-size:16px}
  .hero-grand .hero-visual:after,.archive-record,.archive-record-open i{transition:none}
  .archive-book-dialog.page-turning .archive-book-content{animation:none}
 }
+
+
+/* READER'S PASS — persistent, private reading shelf in the current browser */
+.archive-passport{position:relative;margin:18px 0 26px;padding:clamp(18px,3vw,30px);border:1px solid #c4ad82;background:linear-gradient(125deg,#f2e8d9,#fffdf7 52%,#f0e4df);box-shadow:inset 0 0 0 5px #fffaf2,inset 0 0 0 6px #decba7}
+.passport-heading{display:grid;grid-template-columns:minmax(0,1fr) 76px;gap:18px;align-items:center;padding-bottom:17px;border-bottom:1px solid #ddceb2}
+.passport-kicker{margin:0 0 7px;color:#957a52;font:10px "Cormorant Garamond",Georgia,serif;letter-spacing:.2em}
+.passport-heading h4{margin:0;color:#704655;font:500 clamp(21px,2.5vw,29px)/1.5 "Shippori Mincho",serif;letter-spacing:.1em}
+.passport-heading h4 em{font-style:normal;color:#9b6170}
+.passport-heading p:last-child{max-width:65ch;margin:8px 0 0;color:#625452;font-size:13px;line-height:1.9}
+.passport-seal{display:grid;place-items:center;align-content:center;gap:3px;width:70px;height:70px;border:1px solid #b89a68;border-radius:50%;outline:1px solid #d2bd94;outline-offset:4px;background:radial-gradient(circle,#fffdf7,#eee2cf);color:#795b58;text-align:center}
+.passport-seal span{font:25px "Shippori Mincho",serif}.passport-seal small{font:8px/1.4 "Cormorant Garamond",Georgia,serif;letter-spacing:.12em}
+.passport-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:17px 0;border-block:1px solid #dfd1b8}
+.passport-stats>div{display:flex;flex-direction:column;align-items:center;padding:12px 8px;border-left:1px solid #e3d6c0}
+.passport-stats>div:first-child{border-left:0}
+.passport-stats strong{color:#784b59;font:500 27px/1.3 "Cormorant Garamond",Georgia,serif;font-variant-numeric:tabular-nums}
+.passport-stats span{color:#75645d;font-size:11px;letter-spacing:.08em}
+.passport-shelves{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.passport-shelf{min-width:0}
+.passport-shelf-heading{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:8px}
+.passport-shelf-heading h5{margin:0;color:#704655;font:500 15px "Shippori Mincho",serif}
+.passport-shelf-heading span{color:#9b8666;font:9px "Cormorant Garamond",Georgia,serif;letter-spacing:.16em}
+.passport-item-list{display:grid;gap:6px}
+.passport-item{display:flex;min-width:0;flex-direction:column;align-items:flex-start;gap:2px;padding:9px 11px;border:1px solid #e0d2b8;background:#fffdf8;color:#544748;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
+.passport-item:hover{border-color:#a88b61;background:#f6ece6}
+.passport-item strong{max-width:100%;overflow:hidden;color:#704655;font:500 13px/1.6 "Shippori Mincho",serif;text-overflow:ellipsis;white-space:nowrap}
+.passport-item small{color:#94806d;font-size:9px;letter-spacing:.11em}
+.passport-empty{margin:0;padding:10px 12px;border:1px dashed #d8c9ac;color:#897a6d;font-size:12px;line-height:1.8}
+.passport-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:15px;padding-top:12px;border-top:1px solid #dfd1b8}
+.passport-footer>span{color:#82736a;font-size:11px;line-height:1.7}
+.passport-footer>div{display:flex;flex-wrap:wrap;gap:7px}
+.passport-footer button{min-height:34px;padding:5px 10px;border:1px solid #cdbb98;background:#fffdf8;color:#795360;font:11px "Shippori Mincho",serif;cursor:pointer}
+.passport-footer button:first-child{background:#754655;border-color:#754655;color:#fffaf1}
+.passport-footer button:hover{filter:brightness(.96)}
+.archive-book-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:22px;padding:14px 0;border-top:1px solid #dfd1b8}
+.archive-book-actions button{min-height:39px;padding:7px 12px;border:1px solid #c7b48c;background:#fffdf7;color:#754b58;font:12px "Shippori Mincho",serif;cursor:pointer}
+.archive-book-actions button[aria-pressed=true]{background:#754655;border-color:#754655;color:#fffaf1}
+.archive-book-actions span{flex:1 1 100%;color:#847369;font-size:11px;line-height:1.7}
+#passport-clear:focus-visible,#passport-export:focus-visible,.passport-item:focus-visible,.archive-book-actions button:focus-visible{outline:3px solid #875267;outline-offset:3px}
+@media(max-width:760px){
+ .passport-shelves{grid-template-columns:1fr;gap:14px}
+ .passport-footer{align-items:flex-start;flex-direction:column}
+ .passport-heading{grid-template-columns:minmax(0,1fr) 58px}
+ .passport-seal{width:54px;height:54px}
+ .passport-seal span{font-size:20px}
+ .passport-stats span{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.passport-item,.passport-footer button{transition:none}}

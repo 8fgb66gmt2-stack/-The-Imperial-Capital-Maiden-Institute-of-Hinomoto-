@@ -431,7 +431,23 @@
               <button type="button" data-archive-filter="施設" aria-pressed="false">施設 <small>CAMPUS</small></button>
             </div>
           </div>
-          <div class="archive-results-head"><span id="archive-result-count" aria-live="polite">公開目録　08件</span><span>SELECT A RECORD TO OPEN</span></div>
+          <section class="archive-passport" id="archive-reader-passport" aria-labelledby="passport-title">
+            <div class="passport-heading">
+              <div><p class="passport-kicker">YOUR READING TRACE · LOCAL READER'S PASS</p><h4 id="passport-title">閲覧者証 <em>— あなたの書架</em></h4><p>このブラウザに、ひらいた資料・収蔵した資料・読了した資料を記録します。会員登録や外部送信はありません。</p></div>
+              <div class="passport-seal" aria-hidden="true"><span>閲</span><small>HINOMOTO<br>ARCHIVUM</small></div>
+            </div>
+            <div class="passport-stats" aria-label="閲覧者証の記録">
+              <div><strong id="passport-open-count">00</strong><span>ひらいた資料</span></div>
+              <div><strong id="passport-saved-count">00</strong><span>書架に収蔵</span></div>
+              <div><strong id="passport-complete-count">00</strong><span>読了した資料</span></div>
+            </div>
+            <div class="passport-shelves">
+              <section class="passport-shelf" aria-labelledby="passport-saved-title"><div class="passport-shelf-heading"><h5 id="passport-saved-title">私の収蔵書架</h5><span>MY COLLECTION</span></div><div id="passport-saved-list" class="passport-item-list"><p class="passport-empty">まだ書架に収蔵された資料はありません。書物をひらき、「書架へ収蔵」を選んでください。</p></div></section>
+              <section class="passport-shelf" aria-labelledby="passport-recent-title"><div class="passport-shelf-heading"><h5 id="passport-recent-title">最近ひらいた頁</h5><span>RECENTLY OPENED</span></div><div id="passport-recent-list" class="passport-item-list"><p class="passport-empty">資料をひらくと、ここに閲覧の足跡が残ります。</p></div></section>
+            </div>
+            <div class="passport-footer"><span id="passport-storage-note" role="status">記録はこのブラウザ内に保存されます。</span><div><button id="passport-export" type="button">閲覧者証を書き出す ↓</button><button id="passport-clear" type="button">記録を初期化</button></div></div>
+          </section>
+          <div class="archive-results-head"><span id="archive-result-count" aria-live="polite">公開目録　11件</span><span>SELECT A RECORD TO OPEN</span></div>
           <div class="archive-record-grid" id="archive-record-grid">
             <a class="archive-record" data-record="philosophy" data-category="理念" data-search="教育理念 知を愛し 己の言葉 学問 自由" href="#philosophy"><span class="archive-record-number">COLLECTION　01</span><span class="archive-record-category">理念 · PHILOSOPHY</span><strong>知を愛し、己の言葉を持つ。</strong><span class="archive-record-summary">學院が大切にする、問いを持ち、自ら考え、言葉にするという教育の姿勢。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
             <a class="archive-record" data-record="founder" data-category="人物" data-search="六條杠葉 創設者 帝國大學 女性學生 曙 有栖川劉ノ介" href="#founder"><span class="archive-record-number">COLLECTION　02</span><span class="archive-record-category">人物 · FOUNDER</span><strong>創設者・六條 杠葉</strong><span class="archive-record-summary">帝國大學初の女性學生であり、帝都女學院を創設した文学者の人物記録。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
@@ -441,6 +457,10 @@
             <a class="archive-record" data-record="haruakari" data-category="文学" data-search="春燈 六條杠葉 有栖川劉ノ介 夫妻 逸話 文学" href="haruakari.html"><span class="archive-record-number">COLLECTION　06</span><span class="archive-record-category">文学 · LITERARY RECORD</span><strong>春燈</strong><span class="archive-record-summary">六條杠葉と有栖川劉ノ介。創設者夫妻の暮らしと、互いの自由を尊ぶ姿を描く独立した読み物。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
             <a class="archive-record" data-record="campus" data-category="施設" data-search="施設案内 校舎 大図書館 講堂 中庭 藝術教室 音楽室" href="#campus"><span class="archive-record-number">COLLECTION　07</span><span class="archive-record-category">施設 · CAMPUS</span><strong>學び舎の施設案内</strong><span class="archive-record-summary">學院の施設と、校内案内に収められた場所ごとの紹介。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
             <a class="archive-record" data-record="gallery" data-category="施設" data-search="校内風景 薔薇 百合 図書館 回廊 藝術室 写真" href="#library"><span class="archive-record-number">COLLECTION　08</span><span class="archive-record-category">施設 · VISUAL RECORDS</span><strong>校内風景・圖版</strong><span class="archive-record-summary">薔薇窓の図書館、中庭、サロン、藝術教室。學び舎の風景を収めた圖版。</span><span class="archive-record-open">閲覧する <i aria-hidden="true">↗</i></span></a>
+
+            <a class="archive-record" data-record="circus" data-category="文学" data-search="circus 中原壱葉 國語 代表作 書名索引" href="#faculty-ichiha"><span class="archive-record-number">COLLECTION　09</span><span class="archive-record-category">文学 · BIBLIOGRAPHY</span><strong>『circus』</strong><span class="archive-record-summary">中原壱葉の教職員録に記載される代表作。人物記録と結び付く書名索引。</span><span class="archive-record-open">書誌を閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="nihon-kaidan" data-category="文学" data-search="日ノ本ノ怪談 中原八雲 央語 怪談 神々 妖怪 代表作" href="#faculty-yakumo"><span class="archive-record-number">COLLECTION　10</span><span class="archive-record-category">文学 · BIBLIOGRAPHY</span><strong>『日ノ本ノ怪談』</strong><span class="archive-record-summary">中原八雲の代表作として教職員録に記載される作品の書名索引。</span><span class="archive-record-open">書誌を閲覧する <i aria-hidden="true">↗</i></span></a>
+            <a class="archive-record" data-record="haru-wo-matsu-jin" data-category="文学" data-search="春を待つ仁 六條杠葉 代表作 文学 書名索引" href="#founder"><span class="archive-record-number">COLLECTION　11</span><span class="archive-record-category">文学 · FOUNDER'S WORK</span><strong>『春を待つ仁』</strong><span class="archive-record-summary">創設者・六條杠葉の代表作として人物記録に記載される書名索引。</span><span class="archive-record-open">書誌を閲覧する <i aria-hidden="true">↗</i></span></a>
           </div>
           <p class="archive-empty" id="archive-empty" hidden>該当する資料は見つかりませんでした。別の言葉、または分類でお探しください。</p>
           <div class="archive-room-foot"><span>資料の内容は、各原資料の記載に基づいています。</span><a href="#sealed-button">封緘された頁へ <i aria-hidden="true">↗</i></a></div>
@@ -448,7 +468,7 @@
         <dialog class="archive-book-dialog" id="archive-book-dialog" aria-labelledby="archive-book-title">
           <div class="archive-book-frame">
             <button class="archive-book-close" type="button" aria-label="閲覧室を閉じる">閉じる <span aria-hidden="true">×</span></button>
-            <div class="archive-book-topline"><span>IMPERIAL CAPITAL MAIDEN INSTITUTE</span><span id="archive-book-number">COLLECTION 01 / 08</span></div>
+            <div class="archive-book-topline"><span>IMPERIAL CAPITAL MAIDEN INSTITUTE</span><span id="archive-book-number">COLLECTION 01 / 11</span></div>
             <div class="archive-book-content">
               <p class="archive-book-class" id="archive-book-class">PHILOSOPHY · OPEN COLLECTION</p>
               <h3 id="archive-book-title">資料名</h3>
@@ -456,9 +476,15 @@
               <div class="archive-book-rule"><span>❦</span></div>
               <p class="archive-book-note" id="archive-book-note"></p>
               <div class="archive-book-related"><span>RELATED RECORDS　／　関連資料</span><div id="archive-book-related-list"></div></div>
+
+              <div class="archive-book-actions">
+                <button type="button" id="archive-book-save" aria-pressed="false">＋ 書架へ収蔵</button>
+                <button type="button" id="archive-book-complete" aria-pressed="false">読了として記録</button>
+                <span id="archive-book-feedback" role="status">この資料を閲覧者証に記録できます。</span>
+              </div>
               <a class="archive-book-source" id="archive-book-source" href="#philosophy">原資料をひらく <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="archive-book-controls"><button type="button" id="archive-book-prev">← 前の資料</button><span id="archive-book-count" aria-live="polite">01 / 08</span><button type="button" id="archive-book-next">次の資料 →</button></div>
+            <div class="archive-book-controls"><button type="button" id="archive-book-prev">← 前の資料</button><span id="archive-book-count" aria-live="polite">01 / 11</span><button type="button" id="archive-book-next">次の資料 →</button></div>
             <span class="archive-book-watermark" aria-hidden="true">H</span>
           </div>
         </dialog>
