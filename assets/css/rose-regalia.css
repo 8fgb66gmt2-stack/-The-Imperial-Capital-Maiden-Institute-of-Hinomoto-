@@ -129,3 +129,10 @@ body{background:#f4eee3;color:var(--rr-ink);font-kerning:normal;text-rendering:o
  html{scroll-behavior:auto}
  *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
 }
+
+.regalia-petals{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.regalia-petals i{position:absolute;top:-12%;left:calc(8% + var(--petal-index)*13%);width:9px;height:13px;border-radius:90% 10% 90% 10%;background:linear-gradient(145deg,#f4d9d4,#b97883);opacity:0;filter:drop-shadow(0 2px 2px #78505a20);animation:regalia-fall calc(13s + var(--petal-index)*1.7s) linear infinite;animation-delay:calc(var(--petal-index)*-2.1s)}
+.regalia-petals i:nth-child(2n){background:linear-gradient(145deg,#e8e0c7,#b69b68);width:6px;height:9px}
+.regalia-petals i:nth-child(3n){background:linear-gradient(145deg,#e3e9dc,#91a28b);width:7px;height:10px}
+@keyframes regalia-fall{0%{transform:translate3d(0,-5vh,0) rotate(0deg);opacity:0}10%{opacity:.38}55%{transform:translate3d(32px,48vh,0) rotate(210deg);opacity:.28}90%{opacity:.16}100%{transform:translate3d(-22px,108vh,0) rotate(390deg);opacity:0}}
+@media(max-width:760px){.regalia-petals{opacity:.65}.regalia-petals i{width:6px;height:9px}}
