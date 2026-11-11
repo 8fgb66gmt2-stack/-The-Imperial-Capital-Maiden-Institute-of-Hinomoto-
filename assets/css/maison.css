@@ -373,3 +373,15 @@ a,button{-webkit-tap-highlight-color:transparent}
   .faculty-identity-vertical{right:14px;bottom:14px}
 }
 
+/* SITE-WIDE HORIZONTAL WRITING LOCK
+   Applies after every visual layer and to dynamically added content. */
+html,
+body,
+body *,
+body *::before,
+body *::after{
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+  text-combine-upright:none!important;
+}
+
