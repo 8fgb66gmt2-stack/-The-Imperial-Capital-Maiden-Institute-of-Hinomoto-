@@ -18,9 +18,11 @@
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/atelier.js" defer></script>
   <script src="assets/js/interactive.js" defer></script>
+  <script src="assets/js/campus-atlas.js?v=20261111-guided-tour" defer></script>
   <script src="assets/js/experience.js" defer></script>
   <script src="assets/js/maison.js" defer></script>
   <link rel="stylesheet" href="assets/css/atelier-masterpiece.css?v=20261111-archive-atelier">
+  <link rel="stylesheet" href="assets/css/imperial-world.css?v=20261111-world-atlas">
   <script src="assets/js/archive-room.js?v=20261111-archive-room" defer></script>
 </head>
 <body>
@@ -464,6 +466,37 @@
           <button class="portrait-viewer-close" type="button">閉じる　×</button>
           <figure><img alt=""><figcaption></figcaption></figure>
         </dialog>
+
+        <section class="archive-chronicle" id="institute-chronicle" aria-labelledby="chronicle-title" data-reveal>
+          <header class="world-section-heading">
+            <p class="world-kicker">THE INSTITUTE THROUGH THE YEARS · CHRONICLE</p>
+            <h3 id="chronicle-title">學院の歩みを、<em>記録から辿る。</em></h3>
+            <p>一人の學びへの願いから、學び舎の理念へ。現存する記録が伝える出来事を、その前後関係に沿って並べました。</p>
+          </header>
+          <div class="chronicle-track" aria-label="帝都女學院の歩み">
+            <article class="chronicle-entry"><span class="chronicle-index">01 <i>／ BEFORE THE FOUNDATION</i></span><span class="chronicle-mark" aria-hidden="true">❧</span><h4>学問の門をくぐる</h4><p>帝州・曙に生まれた六條杠葉は、日ノ本帝國國立帝國大學初の女性學生として学問の門をくぐる。</p><a href="#founder">六條杠葉の人物記録 <span aria-hidden="true">↗</span></a></article>
+            <article class="chronicle-entry"><span class="chronicle-index">02 <i>／ THE FOUNDATION</i></span><span class="chronicle-mark" aria-hidden="true">✧</span><h4>學びの場を拓く</h4><p>のちに杠葉は帝都女學院を創設する。学びたいと願う者が、自らの知性を育てられる場所をひらいた。</p><a href="#about">學院案内を読む <span aria-hidden="true">↗</span></a></article>
+            <article class="chronicle-entry"><span class="chronicle-index">03 <i>／ THE PRINCIPLE</i></span><span class="chronicle-mark" aria-hidden="true">❦</span><h4>学びを隔てない理念</h4><p>女だけを隔てるためではなく、誰もが同じように学び、考え、己の人生を選べるように。その願いは『春燈』にも綴られている。</p><a href="haruakari.html">創設者夫妻の逸話『春燈』 <span aria-hidden="true">↗</span></a></article>
+            <article class="chronicle-entry"><span class="chronicle-index">04 <i>／ THE LIVING INSTITUTE</i></span><span class="chronicle-mark" aria-hidden="true">❀</span><h4>知をひらく四つの領域</h4><p>言葉と文学、歴史と思想、芸術と教養、自然と学術。異なる知を結び、自らの言葉で世界と向き合う學びが続いてゆく。</p><a href="curriculum.html">教育課程を閲覧する <span aria-hidden="true">↗</span></a></article>
+          </div>
+          <p class="chronicle-note">年号を補作せず、現在確認できる資料に記された出来事の順序を示しています。</p>
+        </section>
+
+        <section class="archive-relations" id="archive-relations" aria-labelledby="relations-title" data-reveal>
+          <header class="world-section-heading"><p class="world-kicker">PEOPLE · PLACES · WRITINGS</p><h3 id="relations-title">人と記録の、<em>縁を辿る。</em></h3><p>人物、學院、教育課程、読み物。ひとつの記録から、別の頁へ。</p></header>
+          <div class="relation-constellation" role="group" aria-label="人物と資料の関係図">
+            <svg class="relation-lines" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true"><path d="M500 104 C390 160 260 190 170 284"/><path d="M500 104 L500 284"/><path d="M500 104 C610 160 740 190 830 284"/><path d="M170 344 L170 488"/><path d="M500 344 L500 488"/><path d="M830 344 L830 488"/></svg>
+            <span class="relation-edge relation-edge-marriage">夫婦</span><span class="relation-edge relation-edge-founded">創設</span><span class="relation-edge relation-edge-staff">教職員</span><span class="relation-edge relation-edge-tale">逸話に登場</span><span class="relation-edge relation-edge-learning">教育課程</span>
+            <a class="relation-node relation-node-founder" href="#founder"><span>FOUNDER · 01</span><strong>六條 杠葉</strong><small>創設者・文学者</small></a>
+            <a class="relation-node relation-node-spouse" href="haruakari.html"><span>FAMILY RECORD</span><strong>有栖川 劉ノ介</strong><small>杠葉の夫・『春燈』に登場</small></a>
+            <a class="relation-node relation-node-institute" href="#about"><span>THE INSTITUTE</span><strong>帝都女學院</strong><small>知を愛し、己の言葉を持つ。</small></a>
+            <a class="relation-node relation-node-faculty" href="#faculty"><span>PERSONNEL RECORDS</span><strong>教職員録</strong><small>中原壱葉・中原八雲</small></a>
+            <a class="relation-node relation-node-story" href="haruakari.html"><span>LITERARY RECORD · 01</span><strong>『春燈』</strong><small>創設者夫妻の逸話</small></a>
+            <a class="relation-node relation-node-curriculum" href="curriculum.html"><span>THE FOUR FIELDS</span><strong>教育課程</strong><small>學びの四つの領域</small></a>
+            <div class="relation-centre-seal" aria-hidden="true"><img src="assets/images/institute-crest.svg" alt=""></div>
+          </div>
+          <div class="relation-key" aria-label="関係図の補足"><span><i>01</i> 杠葉と劉ノ介は夫婦</span><span><i>02</i> 杠葉が帝都女學院を創設</span><span><i>03</i> 『春燈』は夫妻を描く逸話</span><span><i>04</i> 教育課程・教職員録は學院の記録</span></div>
+        </section>
 
         <div class="sealed-note">
           <span class="sealed-star" aria-hidden="true">✧</span>
