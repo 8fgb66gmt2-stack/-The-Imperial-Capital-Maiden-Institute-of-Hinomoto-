@@ -282,3 +282,50 @@ a,button{-webkit-tap-highlight-color:transparent}
 @media(max-width:900px){.faculty-section{padding-inline:0}.faculty-entry-grid{grid-template-columns:minmax(230px,.78fr) minmax(0,1.22fr)}.faculty-entry-identity-photo{min-height:560px;padding:30px 20px}.faculty-portrait-frame{width:min(100%,300px)}}
 @media(max-width:650px){.hero-engraving{top:3%;letter-spacing:.22em;font-size:9px}.hero-grand .hero-visual:after{font-size:64px;right:-14px;bottom:-30px}.announcement-ribbon:before,.announcement-ribbon:after{display:none}.faculty-section{padding-inline:0}.faculty-indexbar{position:relative;top:auto}.faculty-entry-grid{grid-template-columns:1fr}.faculty-entry-identity-photo{min-height:0;padding:34px 22px 30px}.faculty-portrait-frame{width:min(76%,280px)}.faculty-entry-copy{padding:30px 24px 38px}.faculty-entry-footer{padding:16px 20px;gap:8px;flex-wrap:wrap}.founder-section:after{right:-4%;top:2%;font-size:190px}.section-heading:after{margin-top:16px}}
 @media(prefers-reduced-motion:reduce){.hero-grand .visual-mat img,.faculty-entry,.faculty-portrait-frame img,.gallery-scene,.story-feature,.hero-actions .button-primary{transition:none!important}.faculty-entry:hover,.gallery-scene:hover,.story-feature:hover,.hero-actions .button-primary:hover{transform:none}}
+
+
+/* Faculty archive: prevent premature vertical stacking on compact desktop/tablet. */
+@media (min-width:521px) and (max-width:760px){
+  .faculty-section{padding-inline:4%;padding-block:76px}
+  .faculty-entry-grid,.faculty-entry-yakumo .faculty-entry-grid{
+    display:grid;
+    grid-template-columns:minmax(190px,.72fr) minmax(0,1.28fr);
+    grid-template-areas:"identity copy";
+    align-items:stretch;
+  }
+  .faculty-entry-identity,.faculty-entry-identity-photo{
+    grid-area:identity;min-width:0;min-height:440px;margin:0;max-width:none;
+    padding:30px 16px 26px;
+  }
+  .faculty-entry-copy{grid-area:copy;min-width:0;padding:27px 25px}
+  .faculty-entry-yakumo .faculty-entry-grid{grid-template-areas:"copy identity"}
+  .faculty-portrait-frame{width:min(100%,230px);padding:8px}
+  .faculty-identity-vertical{right:10px;font-size:8px}
+  .faculty-name-header{gap:12px}
+  .faculty-name-header h3{font-size:clamp(27px,4vw,35px)}
+  .faculty-subject-seal{width:49px;height:49px;font-size:9px}
+  .faculty-entry-biography{font-size:13px;line-height:2.15}
+  .faculty-data-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+  .faculty-data-grid div{grid-template-columns:58px minmax(0,1fr);gap:5px}
+  .faculty-data-grid dt,.faculty-data-grid dd{font-size:9px}
+}
+@media(max-width:520px){
+  .faculty-entry-grid,.faculty-entry-yakumo .faculty-entry-grid{
+    display:grid;grid-template-columns:minmax(0,1fr);
+    grid-template-areas:"identity" "copy";
+  }
+  .faculty-entry-identity,.faculty-entry-identity-photo{
+    grid-area:identity;min-height:0;max-width:none;margin:0;
+    padding:30px 20px 26px;
+  }
+  .faculty-entry-copy{grid-area:copy;min-width:0;padding:25px 22px 30px}
+  .faculty-entry-yakumo .faculty-entry-grid{grid-template-areas:"identity" "copy"}
+  .faculty-data-grid,.faculty-data-grid-yakumo{
+    grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;
+  }
+  .faculty-data-grid div{grid-template-columns:1fr;gap:2px;align-content:start;padding:10px 0}
+  .faculty-data-grid div:nth-last-child(-n+2){border-bottom:0}
+  .faculty-data-grid dt{font-size:9px}
+  .faculty-data-grid dd{font-size:11px;overflow-wrap:anywhere}
+  .faculty-entry-biography{font-size:13px;line-height:2.15}
+}
