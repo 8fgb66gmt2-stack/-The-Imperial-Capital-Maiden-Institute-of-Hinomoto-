@@ -21,12 +21,14 @@
   <link rel="stylesheet" href="assets/css/maison.css">
   <link rel="stylesheet" href="assets/css/atelier-masterpiece.css">
   <link rel="stylesheet" href="assets/css/literary-library.css?v=20261111-literary-works">
+  <link rel="stylesheet" href="assets/css/literary-atlas.css?v=20261111-literary-atlas">
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/atelier.js" defer></script>
   <script src="assets/js/interactive.js" defer></script>
   <script src="assets/js/experience.js" defer></script>
   <script src="assets/js/maison.js" defer></script>
   <script src="assets/js/literary-library.js?v=20261111-literary-reader" defer></script>
+  <script src="assets/js/literary-atlas.js?v=20261111-literary-atlas" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
@@ -77,7 +79,31 @@
       </div>
     </section>
 
-    <div class="literary-reader-tools" aria-label="読書設定">
+    <div class="literary-reader-tools"
+    <section class="literary-discovery section-wrap" id="literary-discovery" aria-labelledby="discovery-title">
+      <header class="discovery-heading"><p class="literary-overline">THE READING CATALOGUE · RESEARCH ROOM</p><h2 id="discovery-title">文學目録・作品研究室</h2><p>書名、作者、形式、主題、本文の言葉から収蔵作品を探し、作品のあいだにある響きを辿ります。</p></header>
+      <div class="literary-search-panel">
+        <label for="literary-search">作品・作者・主題・本文を検索</label>
+        <div class="literary-search-row"><input id="literary-search" type="search" placeholder="例：春、仮面、海、孤独、仁……" autocomplete="off"><span id="literary-search-count" aria-live="polite">収蔵作品 03件</span></div>
+        <div class="literary-filter-row" role="group" aria-label="文学形式で絞り込む">
+          <button type="button" data-literary-filter="all" aria-pressed="true">すべて</button><button type="button" data-literary-filter="poetry" aria-pressed="false">短歌・詩</button><button type="button" data-literary-filter="prose" aria-pressed="false">散文詩</button><button type="button" data-literary-filter="folklore" aria-pressed="false">怪談</button>
+        </div>
+        <div class="literary-search-results" id="literary-search-results">
+          <a href="#haru-wo-matsu-jin" data-catalogue-work="haru-wo-matsu-jin"><span>01 · 短歌・連作歌篇</span><strong>春を待つ仁</strong><small>六條 杠葉　／　尊厳・学問・女性の自立・仁</small></a>
+          <a href="#circus" data-catalogue-work="circus"><span>02 · 自由詩・散文詩</span><strong>circus</strong><small>中原 壱葉　／　孤独・仮面・舞台・芸術家</small></a>
+          <a href="#nihon-kaidan" data-catalogue-work="nihon-kaidan"><span>03 · 怪異譚</span><strong>日ノ本ノ怪談 — 沖の灯</strong><small>中原 八雲　／　海・記憶・生者と死者・伝承</small></a>
+        </div>
+        <p class="literary-search-note">検索は本頁に収蔵された本文と書誌情報を対象とします。新しい作品は目録データへ追加することで拡張できます。</p>
+      </div>
+    </section>
+    <section class="literary-authors section-wrap" aria-labelledby="authors-title">
+      <header class="discovery-heading"><p class="literary-overline">THREE AUTHORS · THREE WORLDS</p><h2 id="authors-title">三人の文学者</h2><p>人物記録と作品を結び、異なる眼差しから帝國の文学を読む。</p></header>
+      <div class="literary-author-grid">
+        <article class="literary-author author-yuzuriha"><span>AUTHOR 01 · MODERN POETRY</span><h3>六條 杠葉</h3><p class="author-latin">ROKUJŌ YUZURIHA</p><p>帝州・曙に生まれ、帝國大學初の女性學生を経て帝都女學院を創設した文学者。人間の尊厳と学ぶ自由を、春を待つ心に重ねて詠む。</p><a href="index.html#founder">創設者の人物記録へ ↗</a><a href="#haru-wo-matsu-jin">収蔵作品『春を待つ仁』 ↗</a></article>
+        <article class="literary-author author-ichiha"><span>AUTHOR 02 · POETRY / PROSE POEM</span><h3>中原 壱葉</h3><p class="author-latin">NAKAHARA ICHIHA</p><p>衣世出身。帝都女學院で國語を教える文学者。一人称は「俺」。舞台の笑いと幕の裏の孤独を、都市の音や身体感覚とともに描く。</p><a href="index.html#faculty-ichiha">人物記録へ ↗</a><a href="#circus">収蔵作品『circus』 ↗</a></article>
+        <article class="literary-author author-yakumo"><span>AUTHOR 03 · FOLKLORE / GHOST STORY</span><h3>中原 八雲</h3><p class="author-latin">NAKAHARA YAKUMO</p><p>神武國（ギリシャ）出身、衣世育ち。日ノ本の歴史、妖怪、神々をこよなく愛し、土地に残る記憶と人々の語りを静かな怪異文学へと綴る。</p><a href="index.html#faculty-yakumo">人物記録へ ↗</a><a href="#nihon-kaidan">収蔵作品『日ノ本ノ怪談』 ↗</a></article>
+      </div>
+    </section> aria-label="読書設定">
       <div class="literary-reader-tools-inner">
         <span>READING ROOM　／　読書設定</span>
         <div class="literary-size-controls" role="group" aria-label="本文の文字サイズ">
@@ -101,7 +127,7 @@
           <p class="volume-subtitle">雪の下にも、春を願う心はある。</p>
           <div class="volume-rule"><span>❦</span></div>
           <p class="volume-form">連作歌篇　／　言葉と、自由と、人を想う心について</p>
-          <button class="volume-read-button" type="button" data-mark-read="haru-wo-matsu-jin" aria-pressed="false">読了として閲覧者証に記録</button>
+          <button class="volume-read-button" type="button" data-mark-read="haru-wo-matsu-jin" aria-pressed="false">読了として閲覧者証に記録</button><div class="volume-interactions"><button type="button" class="literary-book-open" data-open-literary-book="haru-wo-matsu-jin">書物をひらく　—　見開き読書室</button><button type="button" class="literary-favorite" data-literary-favorite="haru-wo-matsu-jin" aria-pressed="false">＋ お気に入りの書架へ</button></div>
         </header>
         <article class="literary-text literary-yuzuriha">
           <p class="literary-small-heading">小序</p>
@@ -135,7 +161,7 @@
           <p class="volume-subtitle">笑い声のあとに、ひとりぶんの夜が残る。</p>
           <div class="volume-rule"><span>❦</span></div>
           <p class="volume-form">散文詩　／　幕の内側にいる者の独白</p>
-          <button class="volume-read-button" type="button" data-mark-read="circus" aria-pressed="false">読了として閲覧者証に記録</button>
+          <button class="volume-read-button" type="button" data-mark-read="circus" aria-pressed="false">読了として閲覧者証に記録</button><div class="volume-interactions"><button type="button" class="literary-book-open" data-open-literary-book="circus">書物をひらく　—　見開き読書室</button><button type="button" class="literary-favorite" data-literary-favorite="circus" aria-pressed="false">＋ お気に入りの書架へ</button></div>
         </header>
         <article class="literary-text literary-ichiha">
           <p class="circus-line">幕が上がる。</p>
@@ -165,7 +191,7 @@
           <p class="volume-subtitle">一篇　—　沖の灯</p>
           <div class="volume-rule"><span>❦</span></div>
           <p class="volume-form">怪異譚　／　海辺の村に伝わる、帰らぬ人の話</p>
-          <button class="volume-read-button" type="button" data-mark-read="nihon-kaidan" aria-pressed="false">読了として閲覧者証に記録</button>
+          <button class="volume-read-button" type="button" data-mark-read="nihon-kaidan" aria-pressed="false">読了として閲覧者証に記録</button><div class="volume-interactions"><button type="button" class="literary-book-open" data-open-literary-book="nihon-kaidan">書物をひらく　—　見開き読書室</button><button type="button" class="literary-favorite" data-literary-favorite="nihon-kaidan" aria-pressed="false">＋ お気に入りの書架へ</button></div>
         </header>
         <article class="literary-text literary-yakumo">
           <p>この話を聞いたのは、海に近い小さな村の、古い宿であった。</p>

@@ -18,14 +18,14 @@
   ];
   const byId = new Map(records.map((record,index)=>[record.id,{...record,index}]));
   const storageKey = "hinomoto-maiden-institute-reader-pass-v1";
-  const emptyPass = () => ({saved:[],completed:[],opened:[],recent:[]});
+  const emptyPass = () => ({saved:[],completed:[],opened:[],recent:[],bookmarks:[],progress:{}});
   let pass = emptyPass();
   let storageAvailable = true;
   try {
     const stored = JSON.parse(window.localStorage.getItem(storageKey) || "null");
     if (stored && typeof stored === "object") {
       const valid = list => Array.isArray(list) ? [...new Set(list.filter(id=>byId.has(id)))] : [];
-      pass = {saved:valid(stored.saved),completed:valid(stored.completed),opened:valid(stored.opened),recent:valid(stored.recent)};
+      pass = {saved:valid(stored.saved),completed:valid(stored.completed),opened:valid(stored.opened),recent:valid(stored.recent),bookmarks:Array.isArray(stored.bookmarks)?stored.bookmarks.filter(item=>item&&typeof item.workId==="string"&&Number.isFinite(item.page)):[],progress:stored.progress&&typeof stored.progress==="object"?stored.progress:{}};
     }
   } catch (_) { storageAvailable = false; }
   const persist = () => {
@@ -81,6 +81,20 @@
     if (passportComplete) passportComplete.textContent = String(pass.completed.length).padStart(2,"0");
     renderList(savedList,pass.saved,"saved","書架はまだ空です。資料をひらいて「書架へ収蔵」を選んでください。");
     renderList(recentList,pass.recent,"recent","資料をひらくと、ここに閲覧の足跡が残ります。");
+    const bookmarkList = document.getElementById("passport-bookmark-list");
+    if (bookmarkList) {
+      bookmarkList.replaceChildren();
+      const marks = pass.bookmarks.filter(item=>byId.has(item.workId)).slice(0,6);
+      if (!marks.length) { const p=document.createElement("p");p.className="passport-empty";p.textContent="栞を挟んだ頁はまだありません。作品文庫で頁をひらいてください。";bookmarkList.append(p); }
+      marks.forEach(mark=>{const record=byId.get(mark.workId);const a=document.createElement("a");a.className="passport-item";a.href=record.href;const strong=document.createElement("strong");strong.textContent=record.title+"　—　"+String(mark.page+1).padStart(2,"0")+"見開き";const small=document.createElement("small");small.textContent="BOOKMARK　·　栞を挟んだ頁";a.append(strong,small);bookmarkList.append(a);});
+    }
+    const progressList = document.getElementById("passport-progress-list");
+    if (progressList) {
+      progressList.replaceChildren();
+      const entries = Object.entries(pass.progress||{}).filter(([id])=>byId.has(id));
+      if (!entries.length) { const p=document.createElement("p");p.className="passport-empty";p.textContent="読書を始めると、ここに進捗が記録されます。";progressList.append(p); }
+      entries.forEach(([id,item])=>{const a=document.createElement("a");a.className="passport-item";a.href=byId.get(id).href;const strong=document.createElement("strong");strong.textContent=byId.get(id).title;const small=document.createElement("small");small.textContent="READING　·　"+(item.page||1)+" / "+(item.total||1)+"見開き";a.append(strong,small);progressList.append(a);});
+    }
     const note = document.getElementById("passport-storage-note");
     if (note) note.textContent = storageAvailable ? "記録はこのブラウザ内に保存されます。外部へ送信されません。" : "保存領域を利用できません。現在の閲覧は引き続き可能です。";
   };
@@ -89,7 +103,7 @@
       const stored = JSON.parse(window.localStorage.getItem(storageKey) || "null");
       if (stored && typeof stored === "object") {
         const valid = list => Array.isArray(list) ? [...new Set(list.filter(id=>byId.has(id)))] : [];
-        pass = {saved:valid(stored.saved),completed:valid(stored.completed),opened:valid(stored.opened),recent:valid(stored.recent)};
+        pass = {saved:valid(stored.saved),completed:valid(stored.completed),opened:valid(stored.opened),recent:valid(stored.recent),bookmarks:Array.isArray(stored.bookmarks)?stored.bookmarks.filter(item=>item&&typeof item.workId==="string"&&Number.isFinite(item.page)):[],progress:stored.progress&&typeof stored.progress==="object"?stored.progress:{}};
       }
     } catch (_) { storageAvailable = false; }
     renderPassport();

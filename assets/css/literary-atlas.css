@@ -1,0 +1,95 @@
+/* IMPERIAL LITERARY ATLAS — bespoke editorial layers */
+.literary-discovery,.literary-authors{position:relative;padding-block:clamp(52px,7vw,92px)}
+.discovery-heading{max-width:760px;margin:0 auto 30px;text-align:center}
+.discovery-heading h2{margin:8px 0 12px;color:#704755;font-size:clamp(27px,3vw,39px);letter-spacing:.14em}
+.discovery-heading>p:last-child{color:#65565a;font-size:14px;line-height:2}
+.literary-search-panel{max-width:1050px;margin:auto;padding:clamp(22px,4vw,42px);border:1px solid #cbb88f;background:linear-gradient(135deg,#fffdf7,#f5eee3 55%,#fbf6ed);box-shadow:0 22px 60px #5a44300b;position:relative}
+.literary-search-panel:before{content:"";position:absolute;inset:8px;border:1px solid #dfd1b8;pointer-events:none}
+.literary-search-panel>label{display:block;position:relative;color:#77515c;font-size:13px;letter-spacing:.1em}
+.literary-search-row{display:flex;gap:14px;align-items:center;position:relative;margin-top:10px}
+.literary-search-row input{flex:1;min-width:0;min-height:48px;padding:10px 15px;border:1px solid #cbb88f;background:#fffefa;color:#493e3e;font:15px "Shippori Mincho",serif}
+.literary-search-row input:focus-visible{outline:3px solid #a77b87;outline-offset:3px}
+#literary-search-count{white-space:nowrap;color:#8d7757;font:12px "Cormorant Garamond",serif;letter-spacing:.08em}
+.literary-filter-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;position:relative}
+.literary-filter-row button{border:1px solid #d4c5a8;background:#fffdf7;color:#71545a;padding:7px 14px;font:12px "Shippori Mincho",serif;cursor:pointer}
+.literary-filter-row button[aria-pressed=true]{background:#754655;color:#fffaf0;border-color:#754655}
+.literary-search-results{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.literary-search-results a{display:flex;flex-direction:column;min-height:142px;padding:18px;border:1px solid #ded1ba;background:#fffdf8;color:#4c4140;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.literary-search-results a:hover{transform:translateY(-3px);box-shadow:0 12px 28px #55433312}
+.literary-search-results a[hidden]{display:none}
+.literary-search-results a span{color:#9a8058;font:10px "Cormorant Garamond",serif;letter-spacing:.12em}
+.literary-search-results a strong{margin:10px 0;color:#754655;font:500 20px "Shippori Mincho",serif}
+.literary-search-results a small{color:#726367;font-size:11px;line-height:1.8}
+.literary-search-note{position:relative;margin:18px 0 0;color:#81736b;font-size:11px}
+.literary-author-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.literary-author{position:relative;min-height:280px;padding:30px 26px;border:1px solid #cbb88f;background:#fffdf7;box-shadow:0 16px 40px #5543330b}
+.literary-author:before{content:"";position:absolute;inset:7px;border:1px solid #e5dac6;pointer-events:none}
+.literary-author>*{position:relative}
+.literary-author>span{font:10px "Cormorant Garamond",serif;letter-spacing:.13em;color:#9b805a}
+.literary-author h3{margin:18px 0 0;font-size:27px;letter-spacing:.13em;color:#754655}
+.literary-author .author-latin{margin:0 0 14px;color:#9c8668;font:11px "Cormorant Garamond",serif;letter-spacing:.14em}
+.literary-author>p:not(.author-latin){min-height:100px;color:#55494a;font-size:13px;line-height:2}
+.literary-author>a{display:inline-block;margin:7px 14px 0 0;color:#805563;font-size:11px;text-decoration:none;border-bottom:1px solid #d9c8b5}
+.author-yuzuriha{background:linear-gradient(145deg,#fffaf5,#f4e4e2)}
+.author-ichiha{background:linear-gradient(145deg,#f9f0e8,#eee2d8)}
+.author-yakumo{background:linear-gradient(145deg,#f7f8ef,#e8ece2)}
+.volume-interactions{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
+.volume-interactions button{min-height:40px;padding:8px 15px;border:1px solid #bda77e;background:#fffdf7;color:#704b56;font:12px "Shippori Mincho",serif;cursor:pointer}
+.volume-interactions .literary-book-open{background:#754655;color:#fffaf0;border-color:#754655}
+.volume-interactions .literary-favorite[aria-pressed=true]{background:#eee2d9;color:#754655;border-color:#9d7780}
+.literary-reader-dialog{width:min(1100px,94vw);max-width:none;max-height:92vh;padding:0;border:1px solid #bda77e;background:#eee5d6;color:#493e3e;box-shadow:0 30px 110px #33252b55}
+.literary-reader-dialog::backdrop{background:#332a2b99;backdrop-filter:blur(5px)}
+.reader-shell{padding:clamp(14px,3vw,28px);background:radial-gradient(ellipse at top,#fffdf8,#e9dfd0 75%);overflow:auto;max-height:92vh}
+.reader-topbar{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:0 2px 14px;border-bottom:1px solid #c9b58f}
+.reader-topbar small{color:#8d7757;font:10px "Cormorant Garamond",serif;letter-spacing:.14em}
+.reader-close{border:1px solid #c9b58f;background:#fffdf7;color:#704655;padding:7px 12px;font:12px "Shippori Mincho",serif;cursor:pointer}
+.reader-book{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:900px;min-height:460px;margin:22px auto;background:#a78f6d;padding:10px;box-shadow:0 22px 55px #4a3a2b2b,0 3px 5px #fff9 inset}
+.reader-page{position:relative;min-width:0;padding:clamp(22px,4vw,48px);background:#fffdf6;color:#493e3e;box-shadow:inset 0 0 24px #9b80540b;overflow-wrap:anywhere}
+.reader-page:first-child{border-right:1px solid #e5dac8}
+.reader-page:after{content:"";position:absolute;top:0;bottom:0;right:0;width:16px;background:linear-gradient(90deg,transparent,#7c67401a);pointer-events:none}
+.reader-page p{font-size:15px;line-height:2.2;white-space:pre-line}
+.reader-page .tanka{margin:0;padding:14px 0}
+.reader-page .tanka-sequence{border:0;margin:0}
+.reader-page .circus-line{margin:0 0 1.1em;line-height:2.25}
+.reader-page .yakumo-ending{border-top:1px solid #d8d1c1;padding-top:14px}
+.reader-page[hidden]{display:none}
+.reader-page.page-enter{animation:folio-enter .34s ease both}
+@keyframes folio-enter{from{opacity:.55;transform:perspective(800px) rotateY(-5deg)}to{opacity:1;transform:none}}
+.reader-page-number{position:absolute;bottom:13px;left:0;right:0;text-align:center;color:#a08b6c;font:11px "Cormorant Garamond",serif}
+.reader-controls{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:9px}
+.reader-controls button{min-height:40px;padding:8px 14px;border:1px solid #bda77e;background:#fffdf7;color:#704655;font:12px "Shippori Mincho",serif;cursor:pointer}
+.reader-controls button:disabled{opacity:.35;cursor:not-allowed}
+.reader-page-status{min-width:95px;text-align:center;color:#816c50;font:12px "Cormorant Garamond",serif}
+.reader-progress{max-width:900px;height:3px;margin:18px auto;background:#d8cbb6}
+.reader-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#b79a68,#875363,#82927d);transition:width .25s}
+.reader-note{max-width:900px;margin:10px auto 0;color:#81756c;text-align:center;font-size:11px}
+.reader-shell[data-reader-theme=yuzuriha] .reader-book{background:#b78d83}
+.reader-shell[data-reader-theme=ichiha] .reader-book{background:#78625d}
+.reader-shell[data-reader-theme=ichiha] .reader-page{background:#f8f0e6}
+.reader-shell[data-reader-theme=yakumo] .reader-book{background:#8b9880}
+.reader-shell[data-reader-theme=yakumo] .reader-page{background:#f7f8ef}
+.reader-shell[data-reader-font=large] .reader-page p{font-size:18px}
+.reader-shell[data-reader-font=small] .reader-page p{font-size:13px}
+.literary-reader-dialog:focus-visible,.reader-controls button:focus-visible,.reader-close:focus-visible{outline:3px solid #875267;outline-offset:3px}
+@media(max-width:680px){
+ .literary-search-row{align-items:stretch;flex-direction:column}
+ .literary-search-results,.literary-author-grid{grid-template-columns:1fr}
+ .literary-search-results a{min-height:110px}
+ .literary-author{min-height:0}
+ .literary-author>p:not(.author-latin){min-height:0}
+ .reader-book{grid-template-columns:1fr;min-height:0;padding:7px}
+ .reader-page{min-height:430px}
+ .reader-page:nth-child(2){display:none}
+ .reader-page:nth-child(2)[data-mobile-visible=true]{display:block}
+ .reader-page:first-child{border-right:0}
+ .reader-page:after{display:none}
+ .reader-shell{padding:12px}
+ .reader-controls{gap:6px}
+ .reader-controls button{padding:7px 10px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.literary-search-results a,.reader-progress span{transition:none}.reader-page.page-enter{animation:none}}
+@media print{
+ .literary-discovery,.literary-authors,.volume-interactions,.reader-controls,.reader-topbar{display:none!important}
+ .literary-volume{break-before:page}
+ .literary-text{max-width:none;border:0}
+}
