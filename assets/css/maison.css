@@ -433,3 +433,33 @@ body *::after{
   .faculty-subject-seal{min-width:56px;min-height:49px;padding:6px 8px}
   .faculty-identity-vertical{font-size:9px;letter-spacing:.08em}
 }
+
+
+/* FACULTY REGISTER — horizontal Japanese typography lock */
+#faculty,
+#faculty *,
+#faculty *::before,
+#faculty *::after{
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+  text-combine-upright:none!important;
+}
+#faculty .faculty-identity-vertical{
+  position:relative!important;
+  inset:auto!important;
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  margin:12px 0 0!important;
+  padding:0!important;
+  transform:none!important;
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+  text-align:center!important;
+  white-space:normal!important;
+  letter-spacing:.16em!important;
+}
+#faculty .faculty-heading-side{
+  writing-mode:horizontal-tb!important;
+  text-orientation:mixed!important;
+}
