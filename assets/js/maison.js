@@ -34,4 +34,20 @@
   if (!reduce) {
     document.body.classList.add("maison-ready");
   }
+
+  // On the landing page, keep the chapter marker in step with the reader.
+  if (path === "index.html" && "IntersectionObserver" in window) {
+    const sectionLinks = [...document.querySelectorAll('.global-nav a[href^="#"]')];
+    const sectionMap = new Map(sectionLinks.map(link => [link.getAttribute("href").slice(1), link]));
+    const observed = [...sectionMap.keys()].map(id => document.getElementById(id)).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      sectionLinks.forEach(link => link.removeAttribute("aria-current"));
+      sectionMap.get(visible.target.id)?.setAttribute("aria-current", "location");
+    }, { rootMargin: "-22% 0px -58% 0px", threshold: [0, .15, .35, .6] });
+    observed.forEach(section => observer.observe(section));
+  }
+
 })();
