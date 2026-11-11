@@ -84,6 +84,21 @@
     const note = document.getElementById("passport-storage-note");
     if (note) note.textContent = storageAvailable ? "記録はこのブラウザ内に保存されます。外部へ送信されません。" : "保存領域を利用できません。現在の閲覧は引き続き可能です。";
   };
+  const refreshPassportFromStorage = () => {
+    try {
+      const stored = JSON.parse(window.localStorage.getItem(storageKey) || "null");
+      if (stored && typeof stored === "object") {
+        const valid = list => Array.isArray(list) ? [...new Set(list.filter(id=>byId.has(id)))] : [];
+        pass = {saved:valid(stored.saved),completed:valid(stored.completed),opened:valid(stored.opened),recent:valid(stored.recent)};
+      }
+    } catch (_) { storageAvailable = false; }
+    renderPassport();
+    updateBookActions(records[current]);
+  };
+  window.addEventListener("pageshow",refreshPassportFromStorage);
+  window.addEventListener("storage",event=>{
+    if (event.key === storageKey) refreshPassportFromStorage();
+  });
   const exportButton = document.getElementById("passport-export");
   exportButton?.addEventListener("click",()=>{
     const payload = {title:"日ノ本帝國國立帝都女學院 閲覧者証",exportedAt:new Date().toISOString(),...pass};
