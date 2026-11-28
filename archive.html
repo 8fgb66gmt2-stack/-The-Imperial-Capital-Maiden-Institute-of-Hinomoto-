@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f2e8">
+<meta name="description" content="日ノ本帝國國立帝都女學院の公開資料を横断して閲覧する、デジタル史料目録。">
+<meta property="og:title" content="公開史料目録｜帝都女學院">
+<meta property="og:description" content="学院の公開ページを、分類・検索・関連記録から辿るデジタル閲覧室。">
+<meta property="og:type" content="website">
+<title>公開史料目録｜日ノ本帝國國立帝都女學院</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/archive-room.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/archive-room-index.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ移動</a>
+<div class="page-frame" id="top">
+<div class="utility-bar"><span>日ノ本帝國國立帝都女學院</span><span class="utility-center">THE IMPERIAL CAPITAL · READING ROOM</span><span class="utility-right">公開史料閲覧室</span></div>
+<header class="site-header"><div class="masthead">
+<a class="brand" href="index.html" aria-label="帝都女學院トップページ"><span class="brand-crest" aria-hidden="true"><span>❀</span><i>H</i></span><span class="brand-copy"><span class="brand-kicker">THE IMPERIAL CAPITAL</span><span class="brand-name">帝都女學院</span><span class="brand-subtitle">MAIDEN INSTITUTE OF HINOMOTO</span></span></a>
+<p class="masthead-motto">知を愛し、己の言葉を持つ。</p><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav"><span>目録</span><span class="menu-toggle-mark" aria-hidden="true"><i></i><i></i></span></button>
+</div><nav class="global-nav" id="global-nav" aria-label="主要目録">
+<a href="index.html#about"><span>01</span>學院案内</a><a href="curriculum.html"><span>02</span>教育課程</a><a href="index.html#faculty"><span>03</span>教職員録</a><a href="literature.html"><span>04</span>作品文庫</a><a href="bulletin.html"><span>05</span>學院公報</a><a href="archive.html" aria-current="page"><span>06</span>公開史料目録</a>
+</nav></header>
+<main id="main" class="archive-page">
+<section class="archive-hero">
+<p class="archive-kicker">DIGITAL CATALOGUE　/　PUBLIC COLLECTION</p>
+<h1>公開史料<span>目録</span></h1>
+<p class="archive-lead">記録を探し、頁をひらき、言葉の来歴を辿る。<br>本目録は、現在公開されている学院ウェブ資料への案内です。</p>
+<div class="archive-stamp" aria-label="公開閲覧"><span>閲</span><small>PUBLIC<br>ACCESS</small></div>
+<div class="archive-hero-foot"><span>帝都女學院・公開資料閲覧室</span><span>CATALOGUE　—　01</span></div>
+</section>
+<section class="archive-intro" aria-labelledby="catalogue-heading">
+<div><p class="section-index">A GUIDE TO THE RECORDS</p><h2 id="catalogue-heading">目録について</h2></div>
+<p>ここに掲げる資料番号は、本ページで検索・参照するために付した<strong>ウェブ目録上の整理番号</strong>です。学院史上の原簿番号や、本文に明記されていない成立年代を示すものではありません。内容は各公開ページを出典としており、未確認の史実を補っていません。</p>
+</section>
+<section class="archive-tools" aria-label="史料検索">
+<div class="archive-search"><label for="archive-query">資料を検索する</label><div class="search-field"><span aria-hidden="true">⌕</span><input id="archive-query" type="search" placeholder="資料名・人物・語句・目録番号" autocomplete="off"><button id="clear-query" type="button">解除</button></div><p class="search-hint">入力した語句は資料名・概要・分類・参照語から検索されます。</p></div>
+<div class="archive-filter"><label for="archive-category">分類</label><select id="archive-category"><option value="all">すべての分類</option><option value="institution">學院・制度</option><option value="people">人物・沿革</option><option value="literature">文学・作品</option><option value="bulletin">公報・告知</option></select></div>
+<div class="archive-filter"><label for="archive-period">年代情報</label><select id="archive-period"><option value="all">すべて</option><option value="known">本文に記載あり</option><option value="unknown">年代未詳・掲載日なし</option></select></div>
+</section>
+<div class="catalogue-status"><p id="result-count" aria-live="polite">公開目録を読み込んでいます。</p><button class="archive-view-toggle" id="view-toggle" type="button" aria-pressed="false">目録を簡潔に表示</button></div>
+<section id="catalogue-list" class="catalogue-list" aria-label="公開史料一覧"></section>
+<section class="archive-notice" aria-labelledby="notice-title"><span class="notice-mark" aria-hidden="true">※</span><div><h2 id="notice-title">閲覧上の注意</h2><p>本目録は静的ウェブページです。検索・分類・お気に入りはこの端末内で動作します。保存データはブラウザーのローカル領域に記録され、学院側へ送信されません。資料本文の閲覧は各出典ページで行ってください。</p></div></section>
+<section class="archive-fragment" id="catalogue-fragment" hidden aria-labelledby="fragment-title"><p class="section-index">UNREGISTERED NOTE　/　SEARCH TRACE</p><h2 id="fragment-title">目録に収載されない記録</h2><p>検索語「欠落記録」に反応した、閲覧室の注記。</p><blockquote>「記録の空白は、記録そのものではない。<br>空白を埋める前に、何が失われたのかを確かめよ。」</blockquote><p class="fragment-disclaimer">これはサイト内探索のための創作的な演出文です。学院の既定史実や、未公開人物の設定を追加するものではありません。</p><button id="close-fragment" type="button" class="text-link">注記を閉じる　↗</button></section>
+<footer class="site-footer"><div class="footer-inner"><a class="footer-brand" href="index.html">帝都女學院</a><p>知を愛し、己の言葉を持つ。</p><nav aria-label="フッター"><a href="index.html">學院首頁</a><a href="bulletin.html">學院公報</a><a href="literature.html">作品文庫</a><a href="curriculum.html">教育課程</a></nav><small>© 日ノ本帝國國立帝都女學院　—　公開ウェブ目録</small></div></footer>
+</main></div>
+<dialog id="record-dialog" class="record-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><span>RECORD DETAIL</span><button id="dialog-close" type="button" aria-label="詳細を閉じる">閉じる ×</button></div><div id="dialog-content"></div></dialog>
+</body></html>
